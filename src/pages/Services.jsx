@@ -1,4 +1,5 @@
-import { Wallet, Building2, ShieldCheck, TrendingUp } from "lucide-react";
+﻿import { Wallet, Building2, ShieldCheck, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -10,6 +11,7 @@ const services = [
       "Learn the foundations of money management and build healthier financial habits.",
     list: ["Budgeting", "Saving strategy", "Debt control", "Investment basics"],
     button: "Start Learning",
+    to: null,
   },
   {
     icon: Building2,
@@ -23,6 +25,7 @@ const services = [
       "Inventory control",
     ],
     button: "Train Your Business",
+    to: "/contact",
   },
   {
     icon: ShieldCheck,
@@ -36,11 +39,12 @@ const services = [
       "Monthly check-ins",
     ],
     button: "Book A Session",
+    to: "/contact",
   },
   {
     icon: TrendingUp,
     title: "Corporate Finance Training",
-    description: "Improve your team's financial literacy and decision making.",
+    description: "Improve your team'\''s financial literacy and decision making.",
     list: [
       "Financial statements",
       "Strategy & forecasting",
@@ -48,6 +52,7 @@ const services = [
       "Risk management",
     ],
     button: "Book Corporate Training",
+    to: "/contact",
   },
 ];
 
@@ -94,19 +99,31 @@ export default function Services() {
                 {/* Bullet list */}
                 <ul className="text-sm text-gray-700 space-y-1 mb-6">
                   {service.list.map((item, i) => (
-                    <li key={i}>• {item}</li>
+                    <li key={i}>&bull; {item}</li>
                   ))}
                 </ul>
 
                 {/* Button */}
-                <button
-                  className="mt-auto text-white text-sm py-2 rounded-md transition"
-                  style={{
-                    background: "linear-gradient(to right, #006A71, #004652)",
-                  }}
-                >
-                  {service.button}
-                </button>
+                {service.to ? (
+                  <Link
+                    to={service.to}
+                    className="mt-auto text-white text-sm py-2 rounded-md transition text-center block"
+                    style={{
+                      background: "linear-gradient(to right, #006A71, #004652)",
+                    }}
+                  >
+                    {service.button}
+                  </Link>
+                ) : (
+                  <button
+                    className="mt-auto text-white text-sm py-2 rounded-md transition"
+                    style={{
+                      background: "linear-gradient(to right, #006A71, #004652)",
+                    }}
+                  >
+                    {service.button}
+                  </button>
+                )}
               </div>
             );
           })}

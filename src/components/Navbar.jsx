@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import navLogo from "../assets/navLogo.svg";
@@ -30,11 +30,14 @@ const Navbar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/budget-download">Budget Download</Link>
+          </li>
         </ul>
 
         {/* Desktop CTA */}
         <Link
-          to="/budget-download"
+          to="/services"
           className="hidden md:block text-white px-4 py-2 rounded-md"
           style={{ background: "linear-gradient(to right, #006A71, #004652)" }}
         >
@@ -69,8 +72,11 @@ const Navbar = () => {
           <Link to="/contact" onClick={() => setIsOpen(false)}>
             Contact
           </Link>
+          <Link to="/budget-download" onClick={() => setIsOpen(false)}>
+            Budget Download
+          </Link>
           <Link
-            to="/budget-download"
+            to="/services"
             onClick={() => setIsOpen(false)}
             className="text-white text-center px-4 py-2 rounded-md"
             style={{

@@ -61,7 +61,7 @@ export default function BudgetDownload() {
       }
 
       window.open(
-        "https://docs.google.com/spreadsheets/d/1klvORDZarhUW_UlaT6BfMxtC1blkP0PIr5CL_Ec8LrI/edit?pli=1&gid=0#gid=0",
+        "https://docs.google.com/spreadsheets/d/1klvORDZarhUW_UlaT6BfMxtC1blkP0PIr5CL_Ec8LrI/edit?pli=1&gid=821241466#gid=821241466",
         "_blank",
         "noopener,noreferrer",
       );

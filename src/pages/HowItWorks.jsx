@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -19,12 +20,14 @@ const steps = [
     description:
       "Need personalized support? Book a session with one of our financial advisors.",
     button: "Book A Session",
+    to: "/contact",
   },
   {
     title: "Custom Corporate Training",
     description:
       "Do you represent an organization? Contact us for tailored corporate finance training.",
     button: "Contact Us",
+    to: "/contact",
   },
 ];
 
@@ -62,14 +65,26 @@ export default function HowItWorks() {
                   {step.description}
                 </p>
 
-                <button
-                  className="text-white text-sm px-4 py-2 rounded-md transition"
-                  style={{
-                    background: "linear-gradient(to right, #006A71, #004652)",
-                  }}
-                >
-                  {step.button}
-                </button>
+                {step.to ? (
+                  <Link
+                    to={step.to}
+                    className="inline-block text-white text-sm px-4 py-2 rounded-md transition"
+                    style={{
+                      background: "linear-gradient(to right, #006A71, #004652)",
+                    }}
+                  >
+                    {step.button}
+                  </Link>
+                ) : (
+                  <button
+                    className="text-white text-sm px-4 py-2 rounded-md transition"
+                    style={{
+                      background: "linear-gradient(to right, #006A71, #004652)",
+                    }}
+                  >
+                    {step.button}
+                  </button>
+                )}
               </div>
             </div>
           ))}

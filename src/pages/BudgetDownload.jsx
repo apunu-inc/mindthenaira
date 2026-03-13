@@ -140,7 +140,7 @@ export default function BudgetDownload() {
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
               >
-                {loading ? "Saving..." : "DOWNLOAD"}
+                {loading ? "Saving..." : "Budget Template"}
               </button>
             </div>
 

@@ -49,7 +49,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           {/* FORM */}
           <form className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="First name"

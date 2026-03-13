@@ -7,9 +7,9 @@ const Home = () => {
     <>
       <Navbar />
 
-      <section className="px-10 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <section className="px-4 md:px-10 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 className="text-4xl font-bold mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">
             Bridging Nigeria's <br />
             <span className="text-green-700">Financial Literacy Gap.</span>
           </h1>
@@ -20,7 +20,7 @@ const Home = () => {
             knowledge to thrive.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <button
               className="text-white px-5 py-3 rounded-md"
               style={{

@@ -4,7 +4,7 @@ import navLogo from "../assets/navLogo.svg";
 const Footer = () => {
   return (
     <footer className="border-t mt-16 px-10 py-10">
-      <div className="grid grid-cols-4 gap-10 text-sm text-gray-600">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-sm text-gray-600">
         <div>
           <img src={navLogo} alt="Mind Naira Logo" className="h-8 mb-3" />
         </div>

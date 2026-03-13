@@ -30,14 +30,25 @@ const About = () => {
       <section className="px-10 py-10 max-w-4xl">
         <h3 className="text-xl font-semibold mb-3">Our Story</h3>
         <p className="text-gray-600 mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas
-          fugiat laborum fuga, suscipit exercitationem.
+          Mind Naira was born from a simple but urgent observation — millions of
+          Nigerians work hard every day yet struggle to grow, save, or protect
+          their money. Not because they lack ambition, but because no one ever
+          taught them how. We started with a mission to change that: to make
+          practical, locally relevant financial education accessible to every
+          Nigerian, from the market trader in Lagos to the corporate
+          professional in Abuja.
         </p>
 
         <h3 className="text-xl font-semibold mb-3">Our Solution</h3>
         <p className="text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas
-          fugiat laborum fuga, suscipit exercitationem.
+          We built a platform that meets Nigerians where they are. Through free
+          and affordable courses, hands-on SME training, personal financial
+          advisory, and corporate finance programs, Mind Naira delivers
+          high-impact education tailored to Nigeria's real economic environment.
+          Our content covers everything from budgeting and debt control to cash
+          flow management and investment basics — giving individuals and
+          businesses the tools to make smarter money decisions and build lasting
+          financial confidence.
         </p>
       </section>
 

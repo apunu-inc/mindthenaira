@@ -33,6 +33,12 @@ const Navbar = () => {
           <li>
             <Link to="/budget-download">Budget Download</Link>
           </li>
+          <li>
+            <Link to="/disclaimer">Disclaimer</Link>
+          </li>
+          <li>
+            <Link to="/money-mindset">Money Mindset</Link>
+          </li>
         </ul>
 
         {/* Desktop CTA */}
@@ -74,6 +80,12 @@ const Navbar = () => {
           </Link>
           <Link to="/budget-download" onClick={() => setIsOpen(false)}>
             Budget Download
+          </Link>
+          <Link to="/disclaimer" onClick={() => setIsOpen(false)}>
+            Disclaimer
+          </Link>
+          <Link to="/money-mindset" onClick={() => setIsOpen(false)}>
+            Money Mindset
           </Link>
           <Link
             to="/services"

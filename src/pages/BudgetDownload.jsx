@@ -1,13 +1,8 @@
 import { useState } from "react";
 
 // ─── Brevo config ────────────────────────────────────────────────────────────
-// 1. Sign up free at https://brevo.com
-// 2. Go to Settings → API Keys → Create a key (Contacts permission only)
-// 3. Go to Contacts → Lists → create a list, note the numeric ID
-// 4. Replace the two placeholders below:
-const BREVO_API_KEY = "YOUR_BREVO_API_KEY";
-const BREVO_LIST_ID = 2; // replace with your actual list ID (number)
-// ─────────────────────────────────────────────────────────────────────────────
+const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
+const BREVO_LIST_ID = Number(import.meta.env.VITE_BREVO_LIST_ID) || 1;
 
 export default function BudgetDownload() {
   const [form, setForm] = useState({
@@ -36,7 +31,7 @@ export default function BudgetDownload() {
     setError("");
 
     try {
-      if (BREVO_API_KEY !== "YOUR_BREVO_API_KEY") {
+      if (BREVO_API_KEY) {
         const res = await fetch("https://api.brevo.com/v3/contacts", {
           method: "POST",
           headers: {

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What’s Your Money Mindset?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="intro">
+      <h1>What’s Your Money Mindset?</h1>
+      <ul>
+        <li>Answer honestly</li>
+        <li>Choose the option that feels most like you</li>
+        <li>No right or wrong answers</li>
+      </ul>
+      <button id="startBtn">Start Quiz</button>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="hidden">
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <p id="questionText"></p>
+
+      <div id="options"></div>
+
+      <button id="nextBtn" disabled>Next</button>
+    </section>
+
+    <!-- Result -->
+    <section id="result" class="hidden"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

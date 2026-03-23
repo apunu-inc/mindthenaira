@@ -15,9 +15,9 @@ const Home = () => {
           </h1>
 
           <p className="text-gray-600 mb-6">
-            Mind Naira is Nigeria’s premier platform for high-impact, localized
-            financial education, empowering individuals and SMEs with the
-            knowledge to thrive.
+            Mind the Naira is Nigeria’s premier platform for high impact,
+            locally developed financial education, empowering individuals and
+            SMEs with the knowledge to thrive financially.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">

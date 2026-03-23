@@ -122,7 +122,7 @@ const Privacy = () => {
         </Section>
 
         <Section title="9. Contact">
-          <p>For privacy-related questions:</p>
+          <p>For privacy related questions:</p>
           <p>
             Email:{" "}
             <a

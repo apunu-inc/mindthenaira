@@ -17,7 +17,7 @@ const services = [
     icon: Building2,
     title: "SME Finance Training",
     description:
-      "Give your business stronger financial structure and improve profitability.",
+      "Give your business a stronger financial structure and improve profitability.",
     list: [
       "Cash flow management",
       "Pricing strategy",
@@ -29,9 +29,9 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: "Personal Financial Advisory",
+    title: "Personal Finance Coaching",
     description:
-      "Professional advice tailored to your personal financial goals.",
+      "Professional coaching tailored to your personal financial goals.",
     list: [
       "Custom money plan",
       "Debt reduction strategy",
@@ -44,7 +44,7 @@ const services = [
   {
     icon: TrendingUp,
     title: "Corporate Finance Training",
-    description: "Improve your team'\''s financial literacy and decision making.",
+    description: "Improve your team's financial literacy and decision making.",
     list: [
       "Financial statements",
       "Strategy & forecasting",
@@ -66,8 +66,9 @@ export default function Services() {
           <h2 className="text-3xl font-bold text-gray-900">OUR SERVICES</h2>
 
           <p className="text-gray-600 mt-3 text-sm">
-            Empowering individuals, SMEs, and organizations with financial
-            knowledge that creates real impact.
+            Third service Personal Financial Advisory to be changed to Personal
+            Finance Coaching Under Corporate Finance training...remove repeated
+            apostrophes in front of team
           </p>
         </div>
 

@@ -75,7 +75,7 @@ const CookiesPolicy = () => {
 
         <Section title="5. Third-Party Cookies">
           <p>
-            Some third-party services used on the website may place cookies on
+            Some third party services used on the website may place cookies on
             your device. These cookies are governed by the privacy policies of
             those services.
           </p>
@@ -87,7 +87,7 @@ const CookiesPolicy = () => {
         </Section>
 
         <Section title="7. Contact">
-          <p>For cookie-related questions:</p>
+          <p>For cookie related questions:</p>
           <p>
             Email:{" "}
             <a

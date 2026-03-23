@@ -6,26 +6,26 @@ const steps = [
   {
     title: "Start With Free Courses",
     description:
-      "New to finance? Begin with our free courses and build your foundation at no cost.",
+      "New to finance knowledge? Begin with our free courses and build your foundation at no cost.",
     button: "Browse Free Courses",
   },
   {
     title: "Learn More With Low-Cost Trainings",
     description:
-      "Ready for deeper knowledge? Enroll in affordable trainings for more in-depth financial education.",
+      "Ready for deeper knowledge? Enroll in affordable trainings for more in depth financial educational.",
     button: "Explore Trainings",
   },
   {
     title: "Book a Personal Consultation",
     description:
-      "Need personalized support? Book a session with one of our financial advisors.",
+      "Need personalized support? Book a session with one of our financial coaches.",
     button: "Book A Session",
     to: "/contact",
   },
   {
     title: "Custom Corporate Training",
     description:
-      "Do you represent an organization? Contact us for tailored corporate finance training.",
+      "Do you represent an organization? Contact us for a tailored corporate finance trainings",
     button: "Contact Us",
     to: "/contact",
   },
@@ -42,7 +42,7 @@ export default function HowItWorks() {
 
           <p className="text-gray-600 mt-3 text-sm">
             Follow these steps to improve your financial knowledge and make
-            smarter decisions.
+            informed decisions.
           </p>
         </div>
 

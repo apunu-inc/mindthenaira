@@ -55,7 +55,7 @@ const TermsOfService = () => {
             items={[
               "Is not financial, investment, legal, or tax advice",
               "Should not be relied upon as professional advice",
-              "Does not create a financial advisor-client relationship",
+              "Does not create a financial advisor client relationship",
             ]}
           />
           <p className="mt-2">
@@ -88,7 +88,7 @@ const TermsOfService = () => {
 
         <Section title="6. Third-Party Links">
           <p>
-            The website may include links to third-party websites for
+            The website may include links to third party websites for
             educational purposes. Mind the Naira:
           </p>
           <BulletList

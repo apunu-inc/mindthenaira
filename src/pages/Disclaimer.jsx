@@ -33,7 +33,7 @@ const Disclaimer = () => {
             financial literacy and awareness.
           </p>
           <p>
-            While we aim to provide accurate and up-to-date information, we make
+            While we aim to provide accurate and up to date information, we make
             no guarantees about the completeness, reliability, or accuracy of
             the information presented.
           </p>

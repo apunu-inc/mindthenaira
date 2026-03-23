@@ -10,7 +10,7 @@ const steps = [
     button: "Browse Free Courses",
   },
   {
-    title: "Learn More With Low-Cost Trainings",
+    title: "Learn More With Low Cost Trainings",
     description:
       "Ready for deeper knowledge? Enroll in affordable trainings for more in depth financial educational.",
     button: "Explore Trainings",

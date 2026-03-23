@@ -22,7 +22,7 @@ const About = () => {
           <p className="text-gray-600">
             Mind the Naira is a locally developed financial education platform.
             We believe every Nigerian deserve the knowledge and confidence to
-            make better better money decisions.
+            make better money decisions.
           </p>
         </div>
       </section>

@@ -86,7 +86,7 @@ const TermsOfService = () => {
           </p>
         </Section>
 
-        <Section title="6. Third-Party Links">
+        <Section title="6. Third Party Links">
           <p>
             The website may include links to third party websites for
             educational purposes. Mind the Naira:

@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className="px-4 md:px-10 py-4 border-b">
       <div className="flex items-center justify-between">
-        <div>
+        <Link to="/">
           <img src={navLogo} alt="Mind Naira Logo" className="h-8" />
-        </div>
+        </Link>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8 text-gray-600">

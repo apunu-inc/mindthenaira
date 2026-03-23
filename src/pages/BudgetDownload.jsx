@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-// ─── Brevo config ────────────────────────────────────────────────────────────
-const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
-const BREVO_LIST_ID = Number(import.meta.env.VITE_BREVO_LIST_ID) || 1;
-
 export default function BudgetDownload() {
   const [form, setForm] = useState({
     firstName: "",
@@ -31,28 +27,19 @@ export default function BudgetDownload() {
     setError("");
 
     try {
-      if (BREVO_API_KEY) {
-        const res = await fetch("https://api.brevo.com/v3/contacts", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "api-key": BREVO_API_KEY,
-          },
-          body: JSON.stringify({
-            email: form.email,
-            attributes: {
-              FIRSTNAME: form.firstName,
-              LASTNAME: form.lastName,
-            },
-            listIds: [BREVO_LIST_ID],
-            updateEnabled: true,
-          }),
-        });
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: form.email,
+          firstName: form.firstName,
+          lastName: form.lastName,
+        }),
+      });
 
-        if (!res.ok && res.status !== 204) {
-          const data = await res.json();
-          throw new Error(data.message || "Something went wrong.");
-        }
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.message || "Something went wrong.");
       }
 
       window.open(

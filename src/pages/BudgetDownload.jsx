@@ -38,18 +38,17 @@ export default function BudgetDownload() {
       });
 
       if (!res.ok) {
-        const data = await res.json();
+        const data = await res.json().catch(() => ({}));
         throw new Error(data.message || "Something went wrong.");
       }
 
-      window.open(
-        "https://docs.google.com/spreadsheets/d/1klvORDZarhUW_UlaT6BfMxtC1blkP0PIr5CL_Ec8LrI/edit?pli=1&gid=821241466#gid=821241466",
-        "_blank",
-        "noopener,noreferrer",
-      );
       setSubmitted(true);
     } catch (err) {
-      setError("Couldn't save your details. Please try again.");
+      setError(
+        err.message && err.message !== "Something went wrong."
+          ? err.message
+          : "Couldn't save your details. Please try again.",
+      );
       console.error(err);
     } finally {
       setLoading(false);
@@ -66,14 +65,21 @@ export default function BudgetDownload() {
               You're all set, {form.firstName}!
             </h1>
             <p className="text-teal-200 text-sm mt-3">
-              Your 5 Minute Budget Template is opening in a new tab. Check your
-              email at{" "}
+              Your 5 Minute Budget Template is ready. Check your email at{" "}
               <span className="text-white font-medium">{form.email}</span> —
               we'll send you tips to make the most of it.
             </p>
+            <a
+              href="https://docs.google.com/spreadsheets/d/1klvORDZarhUW_UlaT6BfMxtC1blkP0PIr5CL_Ec8LrI/edit?pli=1&gid=821241466#gid=821241466"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block w-full p-4 rounded-lg bg-white text-teal-900 font-medium hover:bg-gray-200 transition"
+            >
+              Open Budget Template
+            </a>
             <button
               onClick={() => setSubmitted(false)}
-              className="mt-6 text-xs text-teal-300 underline hover:text-white transition"
+              className="mt-2 text-xs text-teal-300 underline hover:text-white transition"
             >
               Go back
             </button>

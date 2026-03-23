@@ -9,6 +9,11 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Missing required fields" });
   }
 
+  if (!process.env.BREVO_API_KEY) {
+    console.error("BREVO_API_KEY environment variable is not set");
+    return res.status(500).json({ message: "Server configuration error" });
+  }
+
   try {
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
@@ -25,12 +30,16 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok && response.status !== 204) {
-      const data = await response.json();
-      return res.status(response.status).json({ message: data.message });
+      const data = await response.json().catch(() => ({}));
+      console.error("Brevo API error:", response.status, data);
+      return res
+        .status(response.status)
+        .json({ message: data.message || "Failed to save contact" });
     }
 
     return res.status(200).json({ success: true });
   } catch (err) {
+    console.error("subscribe handler error:", err);
     return res.status(500).json({ message: "Server error" });
   }
 }

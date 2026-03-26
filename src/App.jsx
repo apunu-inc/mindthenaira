@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import HowItWorks from "./pages/HowItWorks";
-import BudgetDownload from "./pages/BudgetDownload";
+import BudgetTemplate from "./pages/BudgetTemplate";
 import Contact from "./pages/Contact";
 import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
@@ -22,7 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/budget-download" element={<BudgetDownload />} />
+
+        <Route path="/budget-template" element={<BudgetTemplate />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<Privacy />} />

@@ -24,7 +24,7 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3">Resources</h3>
           <Link
-            to="/budget-download"
+            to="/budget-template"
             className="block hover:text-teal-700 transition"
           >
             5 Minute Budget Template

@@ -13,10 +13,14 @@ export default function Contact() {
       answer: (
         <>
           We have our services structured to fit different needs. Take a look at{" "}
-          <Link to="/services" className="text-teal-700 underline hover:text-teal-900">
+          <Link
+            to="/services"
+            className="text-teal-700 underline hover:text-teal-900"
+          >
             our Services
           </Link>{" "}
-          and take the free trainings for Personal Finance or book a session for any of the services that fits your needs.
+          and take the free trainings for Personal Finance or book a session for
+          any of the services that fits your needs.
         </>
       ),
     },
@@ -24,8 +28,14 @@ export default function Contact() {
       question: "What financial courses do you offer?",
       answer: (
         <>
-          Our goal is to make financial education accessible to all. If you are interested in developing your personal finance knowledge, start with the free courses, then move to the low cost training options. You can also book a personal consultation or corporate sessions via{" "}
-          <Link to="/how-it-works" className="text-teal-700 underline hover:text-teal-900">
+          Our goal is to make financial education accessible to all. If you are
+          interested in developing your personal finance knowledge, start with
+          the free courses, then move to the low cost training options. You can
+          also book a personal consultation or corporate sessions via{" "}
+          <Link
+            to="/how-it-works"
+            className="text-teal-700 underline hover:text-teal-900"
+          >
             How It Works
           </Link>
           .
@@ -37,7 +47,10 @@ export default function Contact() {
       answer: (
         <>
           Yes, this is free. Download your free template{" "}
-          <Link to="/budget-download" className="text-teal-700 underline hover:text-teal-900">
+          <Link
+            to="/budget-template"
+            className="text-teal-700 underline hover:text-teal-900"
+          >
             here
           </Link>
           .
@@ -54,11 +67,17 @@ export default function Contact() {
       answer: (
         <>
           Book a personal finance session via{" "}
-          <Link to="/services" className="text-teal-700 underline hover:text-teal-900">
+          <Link
+            to="/services"
+            className="text-teal-700 underline hover:text-teal-900"
+          >
             our Services page
           </Link>
           . For SMEs and Corporate trainings, send an email via{" "}
-          <Link to="/contact" className="text-teal-700 underline hover:text-teal-900">
+          <Link
+            to="/contact"
+            className="text-teal-700 underline hover:text-teal-900"
+          >
             our Contact page
           </Link>
           .
@@ -215,7 +234,7 @@ export default function Contact() {
                 )}
               </div>
             ))}
-{/* 
+            {/* 
             <button className="bg-teal-700 text-white text-sm px-5 py-2 rounded-md mt-3">
               Load more
             </button> */}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function BudgetDownload() {
+export default function BudgetTemplate() {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",

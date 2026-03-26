@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/budget-download">Budget Download</Link>
+            <Link to="/budget-template">Budget Template</Link>
           </li>
           {/* <li>
             <Link to="/disclaimer">Disclaimer</Link>
@@ -78,8 +78,8 @@ const Navbar = () => {
           <Link to="/contact" onClick={() => setIsOpen(false)}>
             Contact
           </Link>
-          <Link to="/budget-download" onClick={() => setIsOpen(false)}>
-            Budget Download
+          <Link to="/budget-template" onClick={() => setIsOpen(false)}>
+            Budget Template
           </Link>
           {/* <Link to="/disclaimer" onClick={() => setIsOpen(false)}>
             Disclaimer

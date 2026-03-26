@@ -6,6 +6,49 @@ import Footer from "../components/Footer";
 
 export default function Contact() {
   const [open, setOpen] = useState(null);
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState(null); // null | "loading" | "success" | "error"
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setErrorMsg(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please try again.");
+    }
+  };
 
   const faqs = [
     {
@@ -120,44 +163,73 @@ export default function Contact() {
       <section className="px-6 md:px-12 lg:px-24 py-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           {/* FORM */}
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="firstName"
                 placeholder="First name"
+                value={form.firstName}
+                onChange={handleChange}
+                required
                 className="border rounded-md p-3 text-sm w-full"
               />
 
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last name"
+                value={form.lastName}
+                onChange={handleChange}
+                required
                 className="border rounded-md p-3 text-sm w-full"
               />
             </div>
 
             <input
               type="email"
+              name="email"
               placeholder="Email address"
+              value={form.email}
+              onChange={handleChange}
+              required
               className="border rounded-md p-3 text-sm w-full"
             />
 
             <input
               type="text"
+              name="phone"
               placeholder="Phone number"
+              value={form.phone}
+              onChange={handleChange}
               className="border rounded-md p-3 text-sm w-full"
             />
 
             <textarea
+              name="message"
               placeholder="Leave us a message..."
               rows="5"
+              value={form.message}
+              onChange={handleChange}
+              required
               className="border rounded-md p-3 text-sm w-full"
             ></textarea>
 
+            {status === "success" && (
+              <p className="text-sm text-teal-700 font-medium">
+                Message sent! We&apos;ll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-600">{errorMsg}</p>
+            )}
+
             <button
               type="submit"
-              className="bg-teal-700 text-white px-6 py-3 rounded-md text-sm hover:bg-teal-800 transition"
+              disabled={status === "loading"}
+              className="bg-teal-700 text-white px-6 py-3 rounded-md text-sm hover:bg-teal-800 transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send message
+              {status === "loading" ? "Sending..." : "Send message"}
             </button>
           </form>
 
@@ -175,7 +247,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="mailto:hello@mindnaira.com"
+                href="mailto:mindthenaira@gmail.com"
                 className="flex items-center gap-3 text-sm text-gray-700 hover:text-teal-700 transition"
               >
                 <Mail size={18} className="text-teal-700" />

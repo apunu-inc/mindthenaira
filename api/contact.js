@@ -14,31 +14,50 @@ export default async function handler(req, res) {
     return res.status(500).json({ message: "Server configuration error" });
   }
 
+  const headers = {
+    "Content-Type": "application/json",
+    "api-key": process.env.BREVO_API_KEY,
+  };
+
   try {
-    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+    // 1. Save contact to Brevo contacts list
+    const contactRes = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "api-key": process.env.BREVO_API_KEY,
-      },
+      headers,
       body: JSON.stringify({
-        sender: {
-          name: "Mind The Naira Contact Form",
-          email: "mindthenaira@gmail.com",
+        email,
+        attributes: {
+          FIRSTNAME: firstName,
+          LASTNAME: lastName,
+          SMS: phone || "",
         },
-        to: [{ email: "mindthenaira@gmail.com", name: "Mind The Naira" }],
-        replyTo: { email, name: `${firstName} ${lastName}` },
-        subject: `New contact form message from ${firstName} ${lastName}`,
-        textContent: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
+        listIds: [Number(process.env.BREVO_LIST_ID) || 2],
+        updateEnabled: true,
       }),
     });
 
-    if (!response.ok) {
-      const data = await response.json().catch(() => ({}));
-      console.error("Brevo API error:", response.status, data);
+    let contactId = null;
+    if (contactRes.status === 201) {
+      const contactData = await contactRes.json().catch(() => ({}));
+      contactId = contactData.id || null;
+    } else if (!contactRes.ok && contactRes.status !== 204) {
+      const data = await contactRes.json().catch(() => ({}));
+      console.error("Brevo contacts error:", contactRes.status, data);
       return res
-        .status(response.status)
-        .json({ message: data.message || "Failed to send message" });
+        .status(contactRes.status)
+        .json({ message: data.message || "Failed to save contact" });
+    }
+
+    // 2. If we have the contact ID, attach the message as a note
+    if (contactId) {
+      await fetch("https://api.brevo.com/v3/notes", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          text: `Phone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
+          contactIds: [contactId],
+        }),
+      }).catch((err) => console.error("Brevo note error:", err));
     }
 
     return res.status(200).json({ success: true });

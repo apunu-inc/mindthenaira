@@ -36,11 +36,7 @@ export default async function handler(req, res) {
       }),
     });
 
-    let contactId = null;
-    if (contactRes.status === 201) {
-      const contactData = await contactRes.json().catch(() => ({}));
-      contactId = contactData.id || null;
-    } else if (!contactRes.ok && contactRes.status !== 204) {
+    if (!contactRes.ok && contactRes.status !== 204) {
       const data = await contactRes.json().catch(() => ({}));
       console.error("Brevo contacts error:", contactRes.status, data);
       return res
@@ -48,13 +44,21 @@ export default async function handler(req, res) {
         .json({ message: data.message || "Failed to save contact" });
     }
 
-    // 2. If we have the contact ID, attach the message as a note
+    // 2. Look up the contact by email to get the ID (works for both new and existing contacts)
+    const lookupRes = await fetch(
+      `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`,
+      { headers },
+    );
+    const contactData = await lookupRes.json().catch(() => ({}));
+    const contactId = contactData.id || null;
+
+    // 3. Attach the message as a note on the contact
     if (contactId) {
       await fetch("https://api.brevo.com/v3/notes", {
         method: "POST",
         headers,
         body: JSON.stringify({
-          text: `Phone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
+          text: `Message from contact form:\n\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
           contactIds: [contactId],
         }),
       }).catch((err) => console.error("Brevo note error:", err));

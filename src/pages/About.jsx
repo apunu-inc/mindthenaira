@@ -1,6 +1,6 @@
 ﻿import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import aboutImg from "../assets/about.png";
+import aboutImg from "../assets/about.webp";
 
 const values = [
   {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Users, Award, TrendingUp } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import heroImg from "../assets/hero.png";
+import heroImg from "../assets/hero.webp";
 
 const stats = [
   { value: "500+", label: "Learners Empowered" },

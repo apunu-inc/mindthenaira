@@ -90,11 +90,8 @@ const CookiesPolicy = () => {
           <p>For cookie related questions:</p>
           <p>
             Email:{" "}
-            <a
-              href="mailto:mindthenaira@gmail.com"
-              className="text-teal-700 hover:underline"
-            >
-              mindthenaira@gmail.com
+            <a href="mailto:hello@mindthenaira.comrline">
+              hello@mindthenaira.com{" "}
             </a>
           </p>
         </Section>

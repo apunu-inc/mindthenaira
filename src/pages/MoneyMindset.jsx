@@ -159,25 +159,72 @@ const MoneyMindset = () => {
     <>
       <Navbar />
 
-      <div className="max-w-2xl mx-auto px-6 py-14">
+      {/* Page header */}
+      <section
+        className="px-6 md:px-12 lg:px-24 py-12 text-white relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #003d46, #006A71)" }}
+      >
+        <div
+          className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, #48d1cc, transparent)",
+            transform: "translate(30%, -30%)",
+          }}
+        />
+        <div className="max-w-7xl mx-auto relative text-center">
+          <span className="inline-block text-teal-300 font-semibold text-xs uppercase tracking-widest bg-teal-900/40 border border-teal-700/40 px-3 py-1 rounded-full mb-4">
+            Self-Assessment
+          </span>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">
+            Money Mindset Quiz
+          </h1>
+          <p className="text-teal-200 text-sm">
+            10 questions &middot; 2 minutes
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-2xl mx-auto px-6 py-12">
         {/* ── Intro ── */}
         {stage === STAGE.INTRO && (
-          <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-10 text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-3">
+          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-10 text-center">
+            <div
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl"
+              style={{
+                background: "linear-gradient(135deg, #e6f7f8, #cceff2)",
+              }}
+            >
+              💰
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               What&apos;s Your Money Mindset?
-            </h1>
-            <p className="text-gray-500 mb-6">10 questions · 2 minutes</p>
-            <ul className="text-left text-gray-600 space-y-2 mb-8 inline-block text-sm">
-              <li>✔ Answer honestly</li>
-              <li>✔ Choose the option that feels most like you</li>
-              <li>✔ No right or wrong answers</li>
+            </h2>
+            <p className="text-gray-500 text-sm mb-7">
+              Discover your relationship with money in under 2 minutes
+            </p>
+            <ul className="text-left space-y-3 mb-8 inline-block">
+              {[
+                "Answer honestly — there are no wrong answers",
+                "Choose the option that feels most like you",
+                "Get personalised insights at the end",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 text-sm text-gray-600"
+                >
+                  <span className="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xs font-bold shrink-0">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
             </ul>
             <br />
             <button
               onClick={handleStart}
-              className="mt-2 px-8 py-3 rounded-lg text-white font-medium"
+              className="mt-2 px-10 py-3.5 rounded-xl text-white font-semibold transition-all hover:shadow-lg hover:scale-[1.02]"
               style={{
-                background: "linear-gradient(to right, #006A71, #004652)",
+                background: "linear-gradient(135deg, #006A71, #004652)",
               }}
             >
               Start Quiz
@@ -187,23 +234,22 @@ const MoneyMindset = () => {
 
         {/* ── Quiz ── */}
         {stage === STAGE.QUIZ && (
-          <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-8">
+          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-8">
             {/* Progress bar */}
-            <div className="h-2 bg-gray-100 rounded-full mb-6 overflow-hidden">
+            <div className="h-2 bg-gray-100 rounded-full mb-2 overflow-hidden">
               <div
-                className="h-full rounded-full transition-all duration-300"
+                className="h-full rounded-full transition-all duration-500"
                 style={{
                   width: `${progress}%`,
-                  background: "linear-gradient(to right, #006A71, #004652)",
+                  background: "linear-gradient(135deg, #006A71, #004652)",
                 }}
               />
             </div>
-
-            <p className="text-xs text-gray-400 mb-4 font-medium tracking-wide uppercase">
-              Question {current + 1} of {questions.length}
+            <p className="text-xs text-gray-400 mb-5 font-medium">
+              {current + 1} of {questions.length}
             </p>
 
-            <p className="text-lg font-semibold text-gray-800 mb-6">
+            <p className="text-lg font-bold text-gray-900 mb-6">
               {questions[current].text}
             </p>
 
@@ -211,10 +257,10 @@ const MoneyMindset = () => {
               {questions[current].options.map((opt) => (
                 <label
                   key={opt.value}
-                  className={`flex items-center gap-3 border rounded-lg px-4 py-3 cursor-pointer transition ${
+                  className={`flex items-center gap-3 border-2 rounded-xl px-4 py-3.5 cursor-pointer transition-all ${
                     selected === opt.value
                       ? "border-teal-600 bg-teal-50 text-teal-800"
-                      : "border-gray-200 hover:border-teal-300 text-gray-700"
+                      : "border-gray-100 hover:border-teal-200 text-gray-700 bg-gray-50 hover:bg-white"
                   }`}
                 >
                   <input
@@ -233,48 +279,56 @@ const MoneyMindset = () => {
             <button
               onClick={handleNext}
               disabled={!selected}
-              className="mt-8 w-full py-3 rounded-lg text-white font-medium transition disabled:opacity-40 disabled:cursor-not-allowed"
+              className="mt-8 w-full py-3.5 rounded-xl text-white font-semibold transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:shadow-lg"
               style={{
-                background: "linear-gradient(to right, #006A71, #004652)",
+                background: "linear-gradient(135deg, #006A71, #004652)",
               }}
             >
-              {current + 1 === questions.length ? "See My Result" : "Next"}
+              {current + 1 === questions.length
+                ? "See My Result"
+                : "Next Question"}
             </button>
           </div>
         )}
 
         {/* ── Result ── */}
         {stage === STAGE.RESULT && result && (
-          <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-10 text-center">
-            <p className="text-sm uppercase tracking-widest text-teal-600 font-semibold mb-2">
+          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-10 text-center">
+            <p className="text-xs uppercase tracking-widest text-teal-600 font-semibold bg-teal-50 border border-teal-100 px-3 py-1 rounded-full inline-block mb-4">
               Your Money Mindset
             </p>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">
               {result.title}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left mb-8">
-              <div className="bg-teal-50 rounded-lg p-4">
-                <p className="text-xs font-semibold text-teal-700 uppercase mb-1">
+              <div className="bg-teal-50 border border-teal-100 rounded-2xl p-5">
+                <p className="text-xs font-bold text-teal-700 uppercase mb-2">
                   Your Strength
                 </p>
-                <p className="text-gray-700 text-sm">{result.strength}</p>
+                <p className="text-gray-700 text-sm font-medium">
+                  {result.strength}
+                </p>
               </div>
-              <div className="bg-amber-50 rounded-lg p-4">
-                <p className="text-xs font-semibold text-amber-700 uppercase mb-1">
+              <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+                <p className="text-xs font-bold text-amber-700 uppercase mb-2">
                   Growth Area
                 </p>
-                <p className="text-gray-700 text-sm">{result.growth}</p>
+                <p className="text-gray-700 text-sm font-medium">
+                  {result.growth}
+                </p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-xs font-semibold text-gray-500 uppercase mb-1">
+              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5">
+                <p className="text-xs font-bold text-gray-500 uppercase mb-2">
                   Next Step
                 </p>
-                <p className="text-gray-700 text-sm">{result.next}</p>
+                <p className="text-gray-700 text-sm font-medium">
+                  {result.next}
+                </p>
               </div>
             </div>
 
-            <p className="text-sm text-gray-500 italic mb-8">
+            <p className="text-sm text-gray-400 italic mb-8">
               Money mastery isn&apos;t about restriction or indulgence.
               <br />
               It&apos;s about choice.
@@ -282,9 +336,9 @@ const MoneyMindset = () => {
 
             <button
               onClick={handleRetake}
-              className="px-8 py-3 rounded-lg text-white font-medium"
+              className="px-10 py-3.5 rounded-xl text-white font-semibold transition-all hover:shadow-lg hover:scale-[1.02]"
               style={{
-                background: "linear-gradient(to right, #006A71, #004652)",
+                background: "linear-gradient(135deg, #006A71, #004652)",
               }}
             >
               Retake Quiz

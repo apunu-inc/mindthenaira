@@ -56,86 +56,117 @@ export default function BudgetTemplate() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-teal-900 px-4">
-      <div className="w-full max-w-md text-center">
+    <div
+      className="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #003d46 0%, #006A71 50%, #00878f 100%)",
+      }}
+    >
+      {/* decorative circles */}
+      <div
+        className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, #48d1cc, transparent)",
+          transform: "translate(30%, -30%)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, #20b2aa, transparent)",
+          transform: "translate(-30%, 30%)",
+        }}
+      />
+
+      <div className="relative w-full max-w-md">
         {submitted ? (
-          <div className="space-y-4">
-            <div className="text-5xl mb-4">🎉</div>
-            <h1 className="text-white text-3xl sm:text-4xl font-semibold leading-tight">
-              You're all set, {form.firstName}!
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10 text-center">
+            <div className="text-5xl mb-5">🎉</div>
+            <h1 className="text-white text-3xl font-bold leading-tight mb-3">
+              You&apos;re all set, {form.firstName}!
             </h1>
-            <p className="text-teal-200 text-sm mt-3">
+            <p className="text-teal-200 text-sm mt-2 mb-7 leading-relaxed">
               Your 5 Minute Budget Template is ready. Check your email at{" "}
-              <span className="text-white font-medium">{form.email}</span> —
-              we'll send you tips to make the most of it.
+              <span className="text-white font-semibold">{form.email}</span>{" "}
+              &mdash; we&apos;ll also send you tips to make the most of it.
             </p>
             <a
               href="https://docs.google.com/spreadsheets/d/1klvORDZarhUW_UlaT6BfMxtC1blkP0PIr5CL_Ec8LrI/edit?pli=1&gid=821241466#gid=821241466"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block w-full p-4 rounded-lg bg-white text-teal-900 font-medium hover:bg-gray-200 transition"
+              className="inline-block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg"
             >
-              Open Budget Template
+              Open Budget Template →
             </a>
             <button
               onClick={() => setSubmitted(false)}
-              className="mt-2 text-xs text-teal-300 underline hover:text-white transition"
+              className="mt-4 text-xs text-teal-300 underline hover:text-white transition"
             >
               Go back
             </button>
           </div>
         ) : (
-          <>
-            <h1 className="text-white text-3xl sm:text-4xl font-semibold mb-8 leading-tight">
-              Download the <br /> 5 Minute Budget Template
-            </h1>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10">
+            <div className="text-center mb-8">
+              <div className="text-4xl mb-4">📅</div>
+              <h1 className="text-white text-2xl sm:text-3xl font-bold leading-tight">
+                Download the 5 Minute
+                <br />
+                Budget Template
+              </h1>
+              <p className="text-teal-200 text-sm mt-2">
+                Free — no credit card required
+              </p>
+            </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               <input
                 name="firstName"
                 placeholder="Your First Name"
                 value={form.firstName}
                 onChange={handleChange}
-                className="w-full p-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-4 rounded-xl bg-white/15 border border-white/20 text-white placeholder-teal-300 focus:outline-none focus:ring-2 focus:ring-white/40 transition"
               />
-
               <input
                 name="lastName"
                 placeholder="Your Last Name"
                 value={form.lastName}
                 onChange={handleChange}
-                className="w-full p-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-4 rounded-xl bg-white/15 border border-white/20 text-white placeholder-teal-300 focus:outline-none focus:ring-2 focus:ring-white/40 transition"
               />
-
               <input
                 name="email"
                 type="email"
                 placeholder="Your Email Address"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full p-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-4 rounded-xl bg-white/15 border border-white/20 text-white placeholder-teal-300 focus:outline-none focus:ring-2 focus:ring-white/40 transition"
               />
 
-              {error && <p className="text-red-300 text-sm">{error}</p>}
+              {error && (
+                <p className="text-red-300 text-sm bg-red-900/20 border border-red-400/30 rounded-xl px-4 py-2">
+                  {error}
+                </p>
+              )}
 
               <button
                 onClick={handleDownload}
                 disabled={!isValid || loading}
-                className={`w-full p-4 rounded-lg font-medium transition
-                  ${
-                    isValid && !loading
-                      ? "bg-white text-teal-900 hover:bg-gray-200"
-                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  }`}
+                className={`w-full p-4 rounded-xl font-semibold transition-all ${
+                  isValid && !loading
+                    ? "bg-white text-teal-900 hover:bg-teal-50 hover:shadow-xl hover:scale-[1.01]"
+                    : "bg-white/20 text-white/40 cursor-not-allowed"
+                }`}
               >
                 {loading ? "Saving..." : "Budget Template"}
               </button>
             </div>
 
-            <p className="text-xs text-teal-200 mt-4">
+            <p className="text-xs text-teal-300/70 mt-5 text-center">
               We respect your privacy. Unsubscribe at any time.
             </p>
-          </>
+          </div>
         )}
       </div>
     </div>

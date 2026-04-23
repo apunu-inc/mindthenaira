@@ -126,10 +126,10 @@ const Privacy = () => {
           <p>
             Email:{" "}
             <a
-              href="mailto:mindthenaira@gmail.com"
+              href="mailto:hello@mindthenaira.com"
               className="text-teal-700 hover:underline"
             >
-              mindthenaira@gmail.com
+              hello@mindthenaira.com
             </a>
           </p>
         </Section>

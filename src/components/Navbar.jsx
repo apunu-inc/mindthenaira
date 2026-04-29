@@ -11,6 +11,7 @@ const links = [
   { to: "/contact", label: "Contact" },
   { to: "/budget-template", label: "Budget Template" },
   { to: "/money-mindset", label: "Money Mindset" },
+  { to: "/blog", label: "Blog" },
 ];
 
 const Navbar = () => {

@@ -26,12 +26,12 @@ const stories = [
       {
         number: "01",
         title: "The WhatsApp Product Sale",
-        text: "I checked all the products I have for the use-by/expiry date and sorted them into 2 piles. Pile 1 was expired and I threw them away, while pile 2 was still good for use by me or other people. I then sent out a broadcast to all my WhatsApp contacts that I was doing a personal care product sale, indicating the products were mostly new to barely used. I created a group and informed everyone when the product listing would happen — Saturday at 7pm to 9pm, when most people are free to check messages. I listed new, unopened products at 75% of going market rate, opened barely used at 50%, and partially used at 30%. I was able to sell off 60% of listed products, then closed the group and gave the rest to friends and family.",
+        text: "I checked all the products I have for the use by/expiry date and sorted them into 2 piles. Pile 1 was expired and I threw them away while pile 2 was still good for use by me or other people. I then sent out a broadcast to all my whatsapp contacts that I was doing a personal care product sale indicating the products were mostly new to barely used and anyone interested in the sale should indicate interest to be added to a group. I created the group and informed everyone when the product posting will happen. I chose a weekend day (Saturday) and a time I knew most people will have availability to check their messages (7pm to 9pm). I listed new, unopened products at 75% of going market rate, opened barely used products at 50% of going rate and partially used products 30% of going market rate. I was able to sell off 60% of listed products after which I closed the whatsapp group. I gave out the remaining products to friends and family.",
       },
       {
         number: "02",
         title: "Using the Right Product Quantities",
-        text: "Probably because I was checking a lot of personal care pages for product prices, I saw a video that shared what quantity of product I should be using across my entire range. I realised I was using 3X to 5X what I should — I just assumed more product meant more effectiveness. I started by reducing my body wash a little bit and I was as clean as I used to be. After some days, I went down to half of my usual use and my sponge was still soapy enough. I reapplied the same to my shampoo, conditioner, facial care, and all other products. To be honest, it was difficult to reduce my toothpaste but I did it. I still slightly overuse sunscreen but I'm working up the courage.",
+        text: "Probably because I was checking a lot of personal care pages for product prices or just my social media algorithm clocking my interest, I saw a video that shared what quantity of product I should be using across my product range. I realised I was using 3X to 5X what I should be using just because I thought the more product I use, the more effective the product is. I started by reducing my body wash a little bit and I was as clean as I used to be. After some days, I went down to half of my usual use and my sponge was still soapy enough and I was clean. With this, I reapplied the same to my shampoo, conditioner, facial care and all other products. To be honest, it was difficult to reduce my toothpaste quantity but I did it. I still overuse sunscreen but I’m working up the courage to use the right quantity. Hopefully I will get there soon.",
       },
     ],
     impact:
@@ -45,21 +45,21 @@ const stories = [
     image: manThree,
     imageAlt: "Black man sitting at a desk with a mug of coffee while working",
     intro:
-      "There are Tea people and there are Coffee people — but I, Tunji, am a Tea and Coffee person. My work day goes like this: Lipton tea to wake me up and get going, about 2 cups of coffee through my work day, and chamomile tea to calm down for sleep. My expense audit revealed I spent N100K on coffee and tea in Q1. I stock up from Jumia: Lipton costs N20K quarterly, coffee is N20K per month, and chamomile tea is N6,000 monthly. I'm a remote working backend developer and somehow did not realise I was spending so much. My Q1 expense audit helped me see what was hiding in plain sight.",
+      "There are Tea people and there are Coffee people but I Tunji is a Tea and Coffee person. My work day goes like this, lipton tea to wake me up and get going. Then I have about 2 cups of coffee through my work day and end the day with chamomile tea to calm down for sleep. My expense audit threw up that I spent N100K on Coffee and Tea in Q1. Somehow, I didn’t realise I was spending so much for this part of my daily existence. I’m sure you are also wondering and thinking it’s impossible you spend so much. I stock up from Jumia where lipton costs N20K quarterly, coffee is N20K per month and chamomile tea is another N6,000 monthly. This was a spend bucket I didn’t realise I was spending so much on and to be honest I can’t afford it. My Q1 expense audit helped me realise this.",
     acts: [
       {
         number: "01",
         title: "Understanding WHY I Drink Tea and Coffee",
-        text: "I evaluated why I drink tea and coffee — because your boy could not afford to sustain this habit without understanding it. My morning Lipton came from my Mum who started sharing her tea with me at age 3 or 4. She drank hers with lemon, ginger, and honey to ward off sickness. I just drank mine black. The instant coffee was my afternoon pick-me-up as a remote worker who needed to stay alert. And a friend recommended chamomile tea as a wind-down after long work days. Understanding the WHY helped me make the decision in Act 2.",
+        text: "I evaluated why I drink tea and coffee. Yes, this was very urgent to understand because your boy can’t afford to sustain this habit. My findings are I picked up drinking tea from my Mum. She started sharing her tea with me since I was like 3 or 4 years old. Although she drank differently than me, her lipton tea was doused with lemon ginger and a big helping of honey. To wade sickness away she said. I just drank mine black. I am a remote working backend developer so at some point during the day, I usually need a pick me up to stay awake and this is where my instant coffee comes in. I realised that by the end of my work day, I’m always charged up and a friend recommended chamomile tea as a way to wind down for the day. So now I know why I do what I do. I have a tough decision to make, read my 2nd unhinged act for what I did",
       },
       {
         number: "02",
         title: "Double Brewing and Cold Brew Batching",
-        text: "Don't laugh at me — I started double brewing my Lipton tea bags. Day 1 I steep as normal for 3 minutes, then put the bag in a covered bowl in the fridge for day 2. Day 2, I steep it longer for 5 minutes. Instant 50% reduction on morning tea cost. For coffee, I switched from hot coffee to cold brew which gives me a double batch — I split it into 2 and keep one batch in the fridge. I also started taking a mini walk during my lunch break as an energy pick-me-up, which I now also do after work. And chamomile tea? I now only drink it on days I actually need it. I switched to warm water on other days, which has a surprisingly similar calming effect.",
+        text: "Don’t laugh at me but I started double brewing my lipton tea bags. On day 1 of the teabags life, I steep as I normally do for 3 minutes and I put it in a covered bowl in the fridge for day 2 use. For day 2, I take it out and I steep longer for 5 minutes. That is instant 50% reduction on my morning tea cost. For coffee, I switched from making hot coffee to making cold coffee which gives me a double batch. I split this into 2 and keep 1 batch in the fridge until I need it. I also started stepping out of the house for a mini walk during my lunch break for a pick me up. Lastly, I now take chamomile tea only on the days that I actually need it. I switched up my chamomile drinking habit to drinking warm water which has a similar effect on me.",
       },
     ],
     impact:
-      "I am less strung out at the end of the day and it is easier for me to wind down and sleep. I also picked up walking which I now do on my lunch break and after work — great for my health, fewer aches and cramps. On the financial side, I reduced my spend on coffee and tea by 50% and I still have chamomile left from the last pack. I intend to redirect the savings into investment and make sure I don't redirect it into another money-guzzling habit.",
+      "I am less strung out at the end of the day and it is easier for me to calm down and go to sleep. I also picked up on walking which I now do on my lunch break and after I’m done with work for the day. This is great for my health as I have less aches and cramps. On the financial side, I was able to reduce my spend on Coffee and Tea by 50% and I still have chamomile left over from the last pack. I intend to redirect the savings into investment. I need to make sure I don’t spend it on another money guzzling habit.",
     impactHighlight: "50% cut on coffee & tea spend",
   },
   {
@@ -69,21 +69,21 @@ const stories = [
     image: womanTwo,
     imageAlt: "Black woman drinking water from a glass bottle outdoors",
     intro:
-      "I love drinking water. Some people tell me I drink too much, but I think my body just loves it and I enjoy it too. My go-to water is Eva water and I spend N25K per month on it — minimum 3 litres daily. That is N300K a year just on water. When I saw that number in my expense audit, I had to take a very long pause.",
+      "I love drinking water. Some people tell me I drink too much water but I think my body just loves water and I enjoy it too. Oh, I don’t just drink water, I also eat. My go to water is Eva water and I spend N25K on water monthly as I drink minimum 3 litres of water daily. That is a lot of money just on water.",
     acts: [
       {
         number: "01",
         title: "Switching to a Water Filter",
-        text: "I considered multiple options: switching to sachet water, switching to Cway, or just using the water from my apartment. My landlord swears he has the purest water in the area but I did not have the courage to start drinking that. I settled on buying a water filter from Jumia for N8K, which I only need to change at most every four months. But I'll be honest — I was still worried if the water was actually pure enough to drink. I continued buying bottled water for about three weeks, even after buying the filter, which meant I still had some hesitancy. My water consumption also dropped because of that hesitancy, which made me feel worse physically.",
+        text: "I considered multiple options like switching to satchet water, switching to Cway water or just going with the water from my apartment. My landlord swears he has the purest water in the area but I don’t courage to start drinking that. I settled on buying a water filter from Jumia for N8K which I need to change at most every four months. Okay, Okay, I trusted the water purifier but I was still worried if the water was actually pure enough to drink. I continued to buy water for about three weeks until I started drinking from the tap. I noticed though that my water consumption dropped rapidly which meant I still had some hesitancy with the water filter.",
       },
       {
         number: "02",
         title: "Mum's Old Fashioned Advice",
-        text: 'I was visiting my Mum and randomly mentioned how my water consumption had dropped since I bought the water filter and I was considering going back to Eva water because my body felt off. My Mum smiled and said, "Why can\'t you just boil your water?" I responded with surprise, and she said, "Is that not what we used to drink when you were growing up and lived here?" It clicked for me immediately. I assumed my parents boiled water because they couldn\'t afford bottled water. In reality, it was a purification method. People of Mind the Naira — I immediately layered my purified water with boiling for extra assurance. I now change my filters every six months and use purified water for both drinking and cooking.',
+        text: "I was visiting my Mum and randomly mentioned to her how my water consumption had dropped since I bought the water filter and I was considering going back to buying Eva water as my body feels funny from not drinking enough water. My Mum smiles and said “Why can’t you just boil your water?” I was like ahn ahn and she responded “Is that not what we used to drink when you were growing up and lived here?” At that point, it clicked for me. I assumed my parents boiled water because they couldn’t afford to buy water as we only offered guests bottled water. In reality, it was a purification action. People of mind the naira, I immediately layered my purified water with boiling for extra assurance. I change my filters every six months as I now like the idea of using purified water for cooking and drinking.",
       },
     ],
     impact:
-      "My water drinking went back up and I enjoy it more knowing it costs me so much less. I went from spending N25K per month — N300K a year — to spending N16K a year on water filters. My boiling did not increase my electricity bill because I combine it with other cooking acts: making eba, I boil enough to fill up my bottles for the next days and the eba I'm making at the same time. I increased my baby-girl spending money by N10K and added the remaining N15K per month to my monthly investment value.",
+      "My water drinking went back up and now I enjoy it more knowing that it costs me so much less than below. I also went from spending N25K per month which is N300K a year to spending N16K a year on water filters. My water boiling did not increase my electricity bill as I combine it with other cooking acts. Want to make eba, I boil enough water to fill up my bottles for the next days and the eba I am making. What did I do with the money saved, I increased my baby girl spending money by N10K and added the remaining N15K to my monthly investment value.",
     impactHighlight: "From N300K/year to N16K/year on water",
   },
 ];
@@ -138,7 +138,7 @@ const UnhingedExpenses = () => {
             in Nigeria
           </h1>
           <p className="text-teal-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-            Yes, we actually did them — and the savings were real.
+            Yes, we actually did them.
           </p>
           <div className="flex items-center justify-center gap-6 text-teal-300 text-sm">
             <span className="flex items-center gap-1.5">
@@ -164,10 +164,10 @@ const UnhingedExpenses = () => {
       <article className="max-w-3xl mx-auto px-6 md:px-0 py-16">
         {/* Intro */}
         <p className="text-gray-600 leading-relaxed text-lg mb-5">
-          There exists the common rule for saving money: focus on the big
-          expenses and don't worry about the small ones. We decided to turn this
-          on its head and see how much we could save by tackling the overlooked
-          expenses — the ones hiding in plain sight.
+          There exists the common rules for saving money like focus on the big
+          expenses and don’t worry about the small expenses. We decided to turn
+          this on it’s head and see how much we can save by reducing the
+          overlooked expenses.
         </p>
         <p className="text-gray-600 leading-relaxed text-lg mb-5">
           Bunmi was concerned about how much she spends on personal care. Tunji
@@ -176,8 +176,7 @@ const UnhingedExpenses = () => {
           computed how much she spends on water annually.
         </p>
         <p className="text-gray-600 leading-relaxed text-lg mb-10">
-          Read on to learn from their experience — and how to apply it to
-          yourself.
+          Read on to learn from our experience and how to apply it to yourself.
         </p>
 
         {/* What is a Q1 Expense Audit Callout */}
@@ -190,7 +189,7 @@ const UnhingedExpenses = () => {
           </p>
           <p className="text-gray-600 leading-relaxed text-sm">
             A quarterly expense audit is when you review every naira you spent
-            over the last three months. The goal is not to feel bad — it is to{" "}
+            over the last three months. The goal is not to feel bad, it is to{" "}
             <strong className="text-teal-700">see clearly</strong> where your
             money actually goes, so you can make intentional decisions. Many
             people are shocked by what they find.
@@ -294,13 +293,13 @@ const UnhingedExpenses = () => {
               do your own expense audit.
             </strong>{" "}
             Look at the last three months of your spending across every
-            category. You may be surprised — even shocked — at what you find.
+            category. You may be surprised even shocked at what you find.
           </p>
           <p className="text-gray-600 leading-relaxed mb-5">
             Then, like Bunmi, Tunji, and Bola, ask yourself the same questions:
             Why do I spend on this? What happens if I change just one thing
             about how I do it? The answers might lead you to your own unhinged
-            act — and a healthier bank balance.
+            act and a healthier bank balance.
           </p>
           <p className="text-gray-700 font-semibold text-lg mb-10">
             Your wallet will thank you. 💚
@@ -321,7 +320,7 @@ const UnhingedExpenses = () => {
             </h4>
             <p className="text-teal-100 mb-6 max-w-md mx-auto">
               Our free budget template is designed for Nigerian earners to help
-              you see where every naira goes — and take back control.
+              you see where every naira goes and take back control.
             </p>
             <Link
               to="/budget-template"

@@ -9,7 +9,7 @@ import womanTwo from "../assets/articleTwo/womanTwo.webp";
 const articles = [
   {
     slug: "/blog/how-to-save-on-n50000-salary-in-nigeria",
-    title: "How to Save on a N50,000 Salary in Nigeria",
+    title: "How to Save on a N50,000 Salary in Nigeria.",
     excerpt:
       "Earning N50,000 feels impossible to save on  but it isn't. This practical guide covers budgeting, expense control, and the mindset shifts that make saving possible at any income level.",
     image: BlogArticleHero,

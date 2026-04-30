@@ -70,8 +70,24 @@ const tips = [
         text: "If you can, set up an automated transfer of your N10K savings out of your account to happen the same day you receive your salary. Doing this will ensure your savings is protected because if you say I will save what remains, there is a high probability that there will be nothing left. ",
       },
       {
-        type: "p",
-        text: "This concept is called pay yourself first and your savings is treated like any regular bill. If you are in formal employment, one way you can easily do this saving is by requesting automatic deduction of your savings into your Personal Pension Plan. Informal sector workers can also take advantage of  Personal Pension Plan as a saving option but you have to do the transfer yourself or set up the automated deduction.",
+        type: "pWithLinks",
+        segments: [
+          {
+            text: "This concept is called pay yourself first and your savings is treated like any regular bill. If you are in formal employment, one way you can easily do this saving is by requesting automatic deduction of your savings into your ",
+          },
+          {
+            text: "Personal Pension Plan",
+            link: "https://www.pencom.gov.ng/personal-pension-plan-ppp/",
+          },
+          { text: ". Informal sector workers can also take advantage of  " },
+          {
+            text: "Personal Pension Plan",
+            link: "https://www.pencom.gov.ng/personal-pension-plan-ppp/",
+          },
+          {
+            text: " as a saving option but you have to do the transfer yourself or set up the automated deduction.",
+          },
+        ],
       },
     ],
   },
@@ -96,7 +112,23 @@ const tips = [
           {
             label: "Food",
             emoji: "🍲",
-            text: "Food is now very expensive….phewww and we can’t exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, NEPA is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now N72K and a 4kg paint bucket is N8.4K. Per Kg, the paint bucket is 46% higher than a 50Kg bag. A 50Kg bag can also be daunting but you can do a bag share with 4 other people.",
+            segments: [
+              {
+                text: "Food is now very expensive….phewww and we can't exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, NEPA is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now ",
+              },
+              {
+                text: "N72K",
+                link: "https://www.supermart.ng/products/big-bull-nigerian-parboiled-rice-50-kg?pr_prod_strat=jac&pr_rec_id=630c3f324&pr_rec_pid=8402678350121&pr_ref_pid=8402765283625&pr_seq=uniform",
+              },
+              { text: " and a 4kg paint bucket is " },
+              {
+                text: "N8.4K",
+                link: "https://www.supermart.ng/products/rice-4-l-local?_pos=10&_sid=f5e781edd&_ss=r",
+              },
+              {
+                text: ". Per Kg, the paint bucket is 46% higher than a 50Kg bag. A 50Kg bag can also be daunting but you can do a bag share with 4 other people.",
+              },
+            ],
           },
           {
             label: "Transport",
@@ -106,7 +138,23 @@ const tips = [
           {
             label: "Data",
             emoji: "📱",
-            text: "Data usage in Nigeria always feels like it’s sped up. You load your phone and before you blink, you are out of data. To manage this, use free wifi where possible and be on the look for bundle offers from the providers. The cheapest offer on the market now is from Glo which gives you 5.2gb total data vs. MTN and Airtel's 4gb total data..",
+            segments: [
+              {
+                text: "Data usage in Nigeria always feels like it's sped up. You load your phone and before you blink, you are out of data. To manage this, use free wifi where possible and be on the look for bundle offers from the providers. The cheapest offer on the market now is from ",
+              },
+              {
+                text: "Glo",
+                link: "https://www.gloworld.com/ng/glo-revised-data-bundles",
+              },
+              { text: " which gives you 5.2gb total data vs. " },
+              { text: "MTN", link: "https://www.mtn.ng/data/data-plans/" },
+              { text: " and " },
+              {
+                text: "Airtel's",
+                link: "https://www.airtel.com.ng/data/data_offers/data_plans",
+              },
+              { text: " 4gb total data.." },
+            ],
           },
           {
             label: "🐱‍💻Tips",
@@ -170,8 +218,19 @@ const tips = [
     image: null,
     content: [
       {
-        type: "p",
-        text: "Put friction between yourself and your savings. Using the Personal Pension Plan automatically locks your savings for a period. Platforms like Cowrywise also let you lock savings for a defined period. Leverage these options to protect your savings from yourself.",
+        type: "pWithLinks",
+        segments: [
+          {
+            text: "Put friction between yourself and your savings. Using the ",
+          },
+          {
+            text: "Personal Pension Plan",
+            link: "https://www.pencom.gov.ng/personal-pension-plan-ppp/",
+          },
+          {
+            text: " automatically locks your savings for a period. Platforms like Cowrywise also let you lock savings for a defined period. Leverage these options to protect your savings from yourself.",
+          },
+        ],
       },
     ],
   },
@@ -221,11 +280,48 @@ const TipContent = ({ content }) =>
                 {item.emoji} {item.label}
               </p>
               <p className="text-gray-600 leading-relaxed text-sm">
-                {item.text}
+                {item.segments
+                  ? item.segments.map((seg, j) =>
+                      seg.link ? (
+                        <a
+                          key={j}
+                          href={seg.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-teal-700 underline hover:text-teal-900"
+                        >
+                          {seg.text}
+                        </a>
+                      ) : (
+                        seg.text
+                      ),
+                    )
+                  : item.text}
               </p>
             </div>
           ))}
         </div>
+      );
+    }
+    if (block.type === "pWithLinks") {
+      return (
+        <p key={i} className="text-gray-600 leading-relaxed mb-4">
+          {block.segments.map((seg, j) =>
+            seg.link ? (
+              <a
+                key={j}
+                href={seg.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-700 underline hover:text-teal-900"
+              >
+                {seg.text}
+              </a>
+            ) : (
+              seg.text
+            ),
+          )}
+        </p>
       );
     }
     if (block.type === "sideHustles") {

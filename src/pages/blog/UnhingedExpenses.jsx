@@ -44,8 +44,28 @@ const stories = [
     topic: "Tunji on Tea and Coffee",
     image: manThree,
     imageAlt: "Black man sitting at a desk with a mug of coffee while working",
-    intro:
-      "There are Tea people and there are Coffee people but I Tunji is a Tea and Coffee person. My work day goes like this, lipton tea to wake me up and get going. Then I have about 2 cups of coffee through my work day and end the day with chamomile tea to calm down for sleep. My expense audit threw up that I spent N100K on Coffee and Tea in Q1. Somehow, I didn’t realise I was spending so much for this part of my daily existence. I’m sure you are also wondering and thinking it’s impossible you spend so much. I stock up from Jumia where lipton costs N20K quarterly, coffee is N20K per month and chamomile tea is another N6,000 monthly. This was a spend bucket I didn’t realise I was spending so much on and to be honest I can’t afford it. My Q1 expense audit helped me realise this.",
+    introSegments: [
+      {
+        text: "There are Tea people and there are Coffee people but I Tunji is a Tea and Coffee person. My work day goes like this, lipton tea to wake me up and get going. Then I have about 2 cups of coffee through my work day and end the day with chamomile tea to calm down for sleep. My expense audit threw up that I spent N100K on Coffee and Tea in Q1. Somehow, I didn't realise I was spending so much for this part of my daily existence. I'm sure you are also wondering and thinking it's impossible you spend so much. I stock up from Jumia where lipton costs ",
+      },
+      {
+        text: "N20K quarterly",
+        link: "https://www.jumia.com.ng/catalog/?q=lipton",
+      },
+      { text: ", coffee is " },
+      {
+        text: "N20K per month",
+        link: "https://www.jumia.com.ng/catalog/?q=gold+kili+instant+coffee",
+      },
+      { text: " and chamomile tea is another " },
+      {
+        text: "N6,000 monthly",
+        link: "https://www.jumia.com.ng/catalog/?q=super+blend+chamomile+tea",
+      },
+      {
+        text: ". This was a spend bucket I didn't realise I was spending so much on and to be honest I can't afford it. My Q1 expense audit helped me realise this.",
+      },
+    ],
     acts: [
       {
         number: "01",
@@ -68,13 +88,34 @@ const stories = [
     topic: "Bola Continues to Drink Water",
     image: womanTwo,
     imageAlt: "Black woman drinking water from a glass bottle outdoors",
-    intro:
-      "I love drinking water. Some people tell me I drink too much water but I think my body just loves water and I enjoy it too. Oh, I don’t just drink water, I also eat. My go to water is Eva water and I spend N25K on water monthly as I drink minimum 3 litres of water daily. That is a lot of money just on water.",
+    introSegments: [
+      {
+        text: "I love drinking water. Some people tell me I drink too much water but I think my body just loves water and I enjoy it too. Oh, I don't just drink water, I also eat. My go to water is Eva water and I spend ",
+      },
+      {
+        text: "N25K on water monthly",
+        link: "https://www.supermart.ng/products/eva-table-water-150-cl-x12?pr_prod_strat=e5_desc&pr_rec_id=282498068&pr_rec_pid=8403957776681&pr_ref_pid=8403957940521&pr_seq=uniform",
+      },
+      {
+        text: " as I drink minimum 3 litres of water daily. That is a lot of money just on water.",
+      },
+    ],
     acts: [
       {
         number: "01",
         title: "Switching to a Water Filter",
-        text: "I considered multiple options like switching to satchet water, switching to Cway water or just going with the water from my apartment. My landlord swears he has the purest water in the area but I don’t courage to start drinking that. I settled on buying a water filter from Jumia for N8K which I need to change at most every four months. Okay, Okay, I trusted the water purifier but I was still worried if the water was actually pure enough to drink. I continued to buy water for about three weeks until I started drinking from the tap. I noticed though that my water consumption dropped rapidly which meant I still had some hesitancy with the water filter.",
+        textSegments: [
+          {
+            text: "I considered multiple options like switching to satchet water, switching to Cway water or just going with the water from my apartment. My landlord swears he has the purest water in the area but I don't courage to start drinking that. I settled on buying ",
+          },
+          {
+            text: "a water filter",
+            link: "https://www.jumia.com.ng/catalog/?q=water+filter+purifier",
+          },
+          {
+            text: " from Jumia for N8K which I need to change at most every four months. Okay, Okay, I trusted the water purifier but I was still worried if the water was actually pure enough to drink. I continued to buy water for about three weeks until I started drinking from the tap. I noticed though that my water consumption dropped rapidly which meant I still had some hesitancy with the water filter.",
+          },
+        ],
       },
       {
         number: "02",
@@ -87,6 +128,23 @@ const stories = [
     impactHighlight: "From N300K/year to N16K/year on water",
   },
 ];
+
+const renderSegments = (segments) =>
+  segments.map((seg, i) =>
+    seg.link ? (
+      <a
+        key={i}
+        href={seg.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-teal-700 underline hover:text-teal-900"
+      >
+        {seg.text}
+      </a>
+    ) : (
+      seg.text
+    ),
+  );
 
 const UnhingedExpenses = () => {
   return (
@@ -224,7 +282,9 @@ const UnhingedExpenses = () => {
 
               {/* Intro paragraph */}
               <p className="text-gray-600 leading-relaxed mb-8 text-base md:text-lg">
-                {story.intro}
+                {story.introSegments
+                  ? renderSegments(story.introSegments)
+                  : story.intro}
               </p>
 
               {/* Acts */}
@@ -243,7 +303,9 @@ const UnhingedExpenses = () => {
                       {act.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      {act.text}
+                      {act.textSegments
+                        ? renderSegments(act.textSegments)
+                        : act.text}
                     </p>
                   </div>
                 ))}

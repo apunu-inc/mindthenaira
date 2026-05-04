@@ -114,7 +114,7 @@ const tips = [
             emoji: "🍲",
             segments: [
               {
-                text: "Food is now very expensive….phewww and we can't exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, Electricity is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now ",
+                text: "Food is now very expensive….phewww and we can't exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, Electricity is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now",
               },
               {
                 text: "N72K",
@@ -126,7 +126,7 @@ const tips = [
                 link: "https://www.supermart.ng/products/rice-4-l-local?_pos=10&_sid=f5e781edd&_ss=r",
               },
               {
-                text: ". Per Kg, the paint bucket is 46% higher than a 50Kg bag. A 50Kg bag can also be daunting but you can do a bag share with 4 other people.",
+                text: ". Per Kg, the paint bucket is 46% higher than a 50Kg bag. A 50Kg bag can also be daunting but you can do a bag share with 4 other people. ",
               },
             ],
           },

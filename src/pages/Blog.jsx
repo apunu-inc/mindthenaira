@@ -74,9 +74,9 @@ const Blog = () => {
             </span>
           </h1>
           <p className="text-teal-100 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            {/* No jargon, no fluff —*/} Practical money guides, honest stories,
-            and actionable steps to help you earn more, spend less, and build
-            real wealth.
+            {/* No jargon, no fluff —*/} Easy to use money guides, honest
+            stories, and actionable steps to help you earn more, spend less, and
+            build real wealth.
           </p>
         </div>
       </section>

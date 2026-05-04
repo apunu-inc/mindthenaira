@@ -27,7 +27,7 @@ const tips = [
       },
       {
         type: "breakdownLabel",
-        text: "As a beginner, try the 70/20/10 budget rule:",
+        text: "As a beginner, try the 70/20/10 budget rule which makes budgeting very simple for you.:",
       },
       {
         type: "breakdown",
@@ -99,7 +99,7 @@ const tips = [
     content: [
       {
         type: "p",
-        text: "As a low earner, the small small things you spend on are important but the most important are the big expenses. So, focus on ways in which you can reduce them. In Nigeria, the biggest expenses are rent (if you live alone), food, airtime/data.",
+        text: "As a low earner, the small small things you spend on are important but the most important are the big expenses. So, focus on ways in which you can reduce them. In Nigeria, the biggest expenses are rent (if you live alone), food, and transportation.",
       },
       {
         type: "expenseList",
@@ -114,7 +114,7 @@ const tips = [
             emoji: "🍲",
             segments: [
               {
-                text: "Food is now very expensive….phewww and we can't exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, NEPA is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now ",
+                text: "Food is now very expensive….phewww and we can't exist on air. To keep food cost low, try to cook at home and reduce the cost of cooking by batch cooking. Hopefully, Electricity is good enough in your area so you can refrigerate your batch cooked meals. Try to avoid buying snacks and drinks in traffic, the cost of these add up really fast. If you are a snack person, then make the effort to buy a carton of what you like which will reduce the cost by close to 50%. If you can, shop basic food items like Garri, Rice, Beans in bulk. For example, a 50Kg bag of rice is now ",
               },
               {
                 text: "N72K",
@@ -133,14 +133,14 @@ const tips = [
           {
             label: "Transport",
             emoji: "🚌",
-            text: "Transport cost in Nigeria particularly in the big cities like Lagos, Abuja, Portharcourt can’t be predicted. The cost is what you get when you step out. To manage this cost, try to combine trips as much as possible and instead of taking a korope/bike for the trip home from your busstop, try walking instead. Walking not only helps you save money, it also helps you stay healthy. Also be on the lookout for cheaper routes you can use for getting to your destination. For those in Lagos, BRT is a cheaper option vs. other alternatives.",
+            text: "Transport cost in Nigeria particularly in the big cities like Lagos, Abuja, Portharcourt can’t be predicted. The cost is what you get when you step out. To manage this cost, try to combine trips as much as possible and instead of taking a korope/bike for the trip home from your bus stop, try walking instead. Walking not only helps you save money, it also helps you stay healthy. Also be on the look out for cheaper routes you can use for getting to your destination. For those in Lagos, BRT is a cheaper option vs. other alternatives.",
           },
           {
             label: "Data",
             emoji: "📱",
             segments: [
               {
-                text: "Data usage in Nigeria always feels like it's sped up. You load your phone and before you blink, you are out of data. To manage this, use free wifi where possible and be on the look for bundle offers from the providers. The cheapest offer on the market now is from ",
+                text: "Data usage in Nigeria always feels like it's sped up. You load your phone and before you blink, you are out of data. To manage this, use free wifi where possible and be on the look out for bundle offers from the providers. The cheapest offer on the market now is from ",
               },
               {
                 text: "Glo",
@@ -153,7 +153,7 @@ const tips = [
                 text: "Airtel's",
                 link: "https://www.airtel.com.ng/data/data_offers/data_plans",
               },
-              { text: " 4gb total data.." },
+              { text: " 4gb total data." },
             ],
           },
           {
@@ -183,7 +183,7 @@ const tips = [
     content: [
       {
         type: "p",
-        text: "Get comfortable with saying No to what you can’t afford and is not part of your budget. Buy my Asoebi – be okay with asking if you can just show up with the colour of the Asoebi. We are contributing money for this person’s birthday/wedding/this/that – be okay with saying you will pass for now or feel no shame with dropping what you can comfortably give even if it’s just N500. Live on what you can afford, don’t get forced into trying to impress people.",
+        text: "Get comfortable with saying No to what you can’t afford and is not part of your budget. Buy my Asoebi, be okay with asking if you can just show up with the colour of the Asoebi. We are contributing money for this person’s birthday/wedding/this/that, be okay with saying you will pass for now or feel no shame with dropping what you can comfortably give even if it’s just N500. Live on what you can afford, don’t get forced into trying to impress people.",
       },
       {
         type: "p",
@@ -199,7 +199,7 @@ const tips = [
     content: [
       {
         type: "p",
-        text: "Earning N50K does not mean you have to accept it as the status quo. An additional N10K per month is a big changer for you.",
+        text: "Earning N50K does not mean you have to accept it as the status quo. Think of ways you can earn additional income. There are many options to try and a few are:",
       },
       {
         type: "sideHustles",
@@ -209,6 +209,10 @@ const tips = [
           "Social media management",
           "POS services",
         ],
+      },
+      {
+        type: "p",
+        text: "An additional N10K per month is a big changer for you.",
       },
     ],
   },
@@ -221,14 +225,14 @@ const tips = [
         type: "pWithLinks",
         segments: [
           {
-            text: "Put friction between yourself and your savings. Using the ",
+            text: "You should put a friction between you an accessing your savings. If you can easily withdraw it, you most likely would. Using the ",
           },
           {
             text: "Personal Pension Plan",
             link: "https://www.pencom.gov.ng/personal-pension-plan-ppp/",
           },
           {
-            text: " automatically locks your savings for a period. Platforms like Cowrywise also let you lock savings for a defined period. Leverage these options to protect your savings from yourself.",
+            text: " automatically locks your savings for a period. Also using platforms like cowrywise gives you the option to lock your savings for a defined period by you. Leverage these options to protect your savings from you.",
           },
         ],
       },
@@ -326,7 +330,7 @@ const TipContent = ({ content }) =>
     }
     if (block.type === "sideHustles") {
       return (
-        <div key={i} className="grid grid-cols-2 gap-3 mt-2">
+        <div key={i} className="grid grid-cols-2 gap-3 mt-2 mb-8">
           {block.items.map((option) => (
             <div
               key={option}
@@ -381,7 +385,7 @@ const HowToSaveN50K = () => {
 
         <div className="relative max-w-3xl mx-auto text-center">
           <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-teal-200 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
-            <BookOpen size={12} /> Personal Finance
+            <BookOpen size={12} /> Saving
           </span>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-5">
             How to Save on a{" "}
@@ -391,7 +395,7 @@ const HowToSaveN50K = () => {
             in Nigeria
           </h1>
           <p className="text-teal-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-            A practical guide that actually works — tried and tested.
+            A money guide that actually works (tried and tested).
           </p>
           <div className="flex items-center justify-center gap-6 text-teal-300 text-sm">
             <span className="flex items-center gap-1.5">
@@ -425,13 +429,15 @@ const HowToSaveN50K = () => {
           stretching the salary to sustain you till the end of the month.
         </p>
         <p className="text-gray-600 leading-relaxed text-lg mb-5">
-          We have to be honest: saving on N50,000 will be difficult. But it is
-          still possible if you make some changes to your choices. There may not
-          be a huge amount to save right away, but consistently building up your
-          savings will protect you from emergencies and reduce financial stress.
+          Now, we have to be honest. Saving on N50,000 will be difficult but it
+          is still possible if you make some changes to your choices. There may
+          not be a huge amount to immediately save but consistently building up
+          your savings will protect you from emergencies and reduce your
+          financial stress.
         </p>
         <p className="text-gray-600 leading-relaxed text-lg mb-10">
-          This guide shows you how to make it possible.
+          This money guide shows you how it is possible to save on a N50,000
+          monthly salary in Nigeria.{" "}
         </p>
 
         {/* Callout */}
@@ -467,7 +473,7 @@ const HowToSaveN50K = () => {
 
         {/* Steps heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-          How do I start saving?
+          How do you start saving?
         </h2>
 
         {/* Tips */}
@@ -502,23 +508,30 @@ const HowToSaveN50K = () => {
         </div>
 
         {/* Closing */}
-        <div className="mt-16 pt-10 border-t border-gray-100">
+        <div className="mt-8 border-t border-gray-100">
           <p className="text-gray-600 leading-relaxed mb-5">
-            As you apply the above steps, try to stick to your budget. Do not
-            wait until you earn more — start where you are and build the saving
-            habit now. It will follow you as your income grows.
+            As you apply above steps and work on building your savings, try to
+            stick to your budget as this will help you achieve your saving goal.
+            Don’t wait until you start earning a bigger salary, start where you
+            are so you build the habit of saving and you will carry this with
+            you as you start to earn more.
           </p>
           <p className="text-gray-600 leading-relaxed mb-5">
-            Do not transfer to your savings and then withdraw it the next day.
-            And remember: the N1K you spend on lunch at work adds up to{" "}
-            <strong className="text-gray-800">N22K a month</strong> — nearly
-            half of what you earn. Small expenses matter just as much as big
-            ones.
+            Do not transfer to your savings account and the next day you are
+            already withdrawing it. Also don’t think that the N1K you spend on
+            lunch at work don’t matter, this adds up quickly to{" "}
+            <strong className="text-gray-800">N22K a month</strong> which is
+            almost 50% of what you earn. The small expenses are as important as
+            the big expenses for you.
           </p>
           <p className="text-gray-600 leading-relaxed mb-5">
-            If you can only save N5K per month, save it. When you see your
-            balance growing as you invest and keep adding to it, you will find
-            yourself increasing the amount. Be consistent, start this month.
+            If you are able to save only N5K per month, save it and start
+            building the saving habit. When you see your savings increasing as
+            you invest it and keep adding to it, you will find yourself
+            increasing the amount. It is not easy to save when you earn N50K but
+            as we said in the beginning, it is possible by applying the steps we
+            have shared. Be consistent with what you can afford to start with
+            and start this month.
           </p>
           <p className="text-gray-700 font-semibold text-lg mb-10">
             Let's start saving. 💚

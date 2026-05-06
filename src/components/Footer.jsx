@@ -169,7 +169,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-800 px-6 md:px-12 lg:px-24 py-5">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-600">
-          <p>© 2025 Mind the Naira. All rights reserved.</p>
+          <p>© 2026 Mind the Naira. All rights reserved.</p>
           <p>Built for Nigeria 🇳🇬</p>
         </div>
       </div>

@@ -200,7 +200,7 @@ const UnhingedExpenses = () => {
           </p>
           <div className="flex items-center justify-center gap-6 text-teal-300 text-sm">
             <span className="flex items-center gap-1.5">
-              <Calendar size={14} /> January 2026
+              <Calendar size={14} /> April 2026
             </span>
             <span className="flex items-center gap-1.5">
               <Clock size={14} /> 10 min read

@@ -15,7 +15,7 @@ const articles = [
     image: BlogArticleHero,
     imageAlt: "Nigerian naira notes representing savings and budgeting",
     category: "Personal Finance",
-    date: "April 2026",
+    date: "April 2026 ",
     readTime: "8 min read",
     featured: true,
   },

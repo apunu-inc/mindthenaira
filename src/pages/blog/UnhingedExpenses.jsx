@@ -26,7 +26,7 @@ const stories = [
       {
         number: "01",
         title: "The WhatsApp Product Sale",
-        text: "I checked all the products I have for the use by/expiry date and sorted them into 2 piles. Pile 1 was expired and I threw them away while pile 2 was still good for use by me or other people. I then sent out a broadcast to all my whatsapp contacts that I was doing a personal care product sale indicating the products were mostly new to barely used and anyone interested in the sale should indicate interest to be added to a group. I created the group and informed everyone when the product posting will happen. I chose a weekend day (Saturday) and a time I knew most people will have availability to check their messages (7pm to 9pm). I listed new, unopened products at 75% of going market rate, opened barely used products at 50% of going rate and partially used products 30% of going market rate. I was able to sell off 60% of listed products after which I closed the whatsapp group. I gave out the remaining products to friends and family.",
+        text: "I checked all the products I have for the use by/expiry date and sorted them into 2 piles. Pile 1 was expired and I threw them away while pile 2 was still good for use by me or other people. I then sent out a broadcast to all my whatsapp contacts that I was doing a personal care product sale indicating the products were mostly new to barely used and anyone interested in the sale should indicate interest to be added to a group. I created the group and informed everyone when the product posting will happen. I chose a weekend day (Saturday) and a time I knew most people will have availability to check their messages (7pm to 9pm). I listed new, unopened products at 75% of going market rate, opened barely used products at 50% of going rate and partially used products at 30% of going market rate. I was able to sell off 60% of listed products after which I closed the whatsapp group. I gave out the remaining products to friends and family.",
       },
       {
         number: "02",
@@ -70,7 +70,7 @@ const stories = [
       {
         number: "01",
         title: "Understanding WHY I Drink Tea and Coffee",
-        text: "I evaluated why I drink tea and coffee. Yes, this was very urgent to understand because your boy can’t afford to sustain this habit. My findings are I picked up drinking tea from my Mum. She started sharing her tea with me since I was like 3 or 4 years old. Although she drank differently than me, her lipton tea was doused with lemon ginger and a big helping of honey. To wade sickness away she said. I just drank mine black. I am a remote working backend developer so at some point during the day, I usually need a pick me up to stay awake and this is where my instant coffee comes in. I realised that by the end of my work day, I’m always charged up and a friend recommended chamomile tea as a way to wind down for the day. So now I know why I do what I do. I have a tough decision to make, read my 2nd unhinged act for what I did",
+        text: "I evaluated why I drink tea and coffee. Yes, this was very urgent to understand because your boy can’t afford to sustain this habit. My findings are I picked up drinking tea from my Mum. She started sharing her tea with me since I was like 3 or 4 years old. Although she drank differently than me, her lipton tea was doused with lemon, ginger and a big helping of honey. To wade sickness away she said. I just drank mine black. I am a remote working backend developer so at some point during the day, I usually need a pick me up to stay awake and this is where my instant coffee comes in. I realised that by the end of my work day, I’m always charged up and a friend recommended chamomile tea as a way to wind down for the day. So now I know why I do what I do. I have a tough decision to make, read my 2nd unhinged act for what I did",
       },
       {
         number: "02",
@@ -106,7 +106,7 @@ const stories = [
         title: "Switching to a Water Filter",
         textSegments: [
           {
-            text: "I considered multiple options like switching to satchet water, switching to Cway water or just going with the water from my apartment. My landlord swears he has the purest water in the area but I don't courage to start drinking that. I settled on buying ",
+            text: "I considered multiple options like switching to satchet water, switching to Cway water or just going with the water from my apartment. My landlord swears he has the purest water in the area but I don't have courage to start drinking that. I settled on buying ",
           },
           {
             text: "a water filter",
@@ -124,7 +124,7 @@ const stories = [
       },
     ],
     impact:
-      "My water drinking went back up and now I enjoy it more knowing that it costs me so much less than below. I also went from spending N25K per month which is N300K a year to spending N16K a year on water filters. My water boiling did not increase my electricity bill as I combine it with other cooking acts. Want to make eba, I boil enough water to fill up my bottles for the next days and the eba I am making. What did I do with the money saved, I increased my baby girl spending money by N10K and added the remaining N15K to my monthly investment value.",
+      "My water drinking went back up and now I enjoy it more knowing that it costs me so much less than before. I also went from spending N25K per month which is N300K a year to spending N16K a year on water filters. My water boiling did not increase my electricity bill as I combine it with other cooking acts. Want to make eba, I boil enough water to fill up my bottles for the next days and the eba I am making. What did I do with the money saved, I increased my baby girl spending money by N10K and added the remaining N15K to my monthly investment value.",
     impactHighlight: "From N300K/year to N16K/year on water",
   },
 ];
@@ -243,7 +243,7 @@ const UnhingedExpenses = () => {
           style={{ background: "linear-gradient(135deg, #e6f7f8, #f0fafb)" }}
         >
           <p className="text-gray-700 font-semibold mb-2">
-            What is a Q1 Expense Audit?
+            What is a Quarterly Expense Audit?
           </p>
           <p className="text-gray-600 leading-relaxed text-sm">
             A quarterly expense audit is when you review every naira you spent
@@ -355,7 +355,7 @@ const UnhingedExpenses = () => {
               do your own expense audit.
             </strong>{" "}
             Look at the last three months of your spending across every
-            category. You may be surprised even shocked at what you find.
+            category. You may be surprised, even shocked at what you find.
           </p>
           <p className="text-gray-600 leading-relaxed mb-5">
             Then, like Bunmi, Tunji, and Bola, ask yourself the same questions:

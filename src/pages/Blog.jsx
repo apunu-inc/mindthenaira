@@ -31,6 +31,18 @@ const articles = [
     readTime: "10 min read",
     featured: false,
   },
+  {
+    slug: "/blog/do-you-know-your-financial-status",
+    title: "Do You Know Your Financial Status?",
+    excerpt:
+      "Learn how to calculate your net worth with an assets vs debts table, and turn your current numbers into a clear financial snapshot.",
+    image: BlogArticleHero,
+    imageAlt: "Nigerian banker reviewing financial information on a laptop",
+    category: "Net Worth",
+    date: "April 2026",
+    readTime: "6 min read",
+    featured: false,
+  },
 ];
 
 const Blog = () => {

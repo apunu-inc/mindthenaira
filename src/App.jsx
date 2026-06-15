@@ -15,6 +15,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Blog from "./pages/Blog";
 import HowToSaveN50K from "./pages/blog/HowToSaveN50K";
 import UnhingedExpenses from "./pages/blog/UnhingedExpenses";
+import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialStatus";
+
 function App() {
   return (
     <BrowserRouter>
@@ -42,6 +44,10 @@ function App() {
         <Route
           path="/blog/unhinged-ways-we-reduced-expenses-in-nigeria"
           element={<UnhingedExpenses />}
+        />
+        <Route
+          path="/blog/do-you-know-your-financial-status"
+          element={<DoYouKnowYourFinancialStatus />}
         />
       </Routes>
       <CookieBanner />

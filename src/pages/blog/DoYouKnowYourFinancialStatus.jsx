@@ -285,7 +285,7 @@ const DoYouKnowYourFinancialStatus = () => {
             For your net worth calculator, you can download and use the word
             document{" "}
             <a
-              href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
+              href="https://docs.google.com/document/d/1Sai159gbdkcVQ-6cSLQFiGnlZYuxKO46Dl93yNgPeoo/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-teal-700 underline hover:text-teal-900"

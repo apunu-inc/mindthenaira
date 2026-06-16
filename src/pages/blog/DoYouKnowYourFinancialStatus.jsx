@@ -158,31 +158,29 @@ const DoYouKnowYourFinancialStatus = () => {
             <p className="text-gray-700 font-semibold">
               Now, let’s get into the steps:
             </p>
-            <ol className="list-decimal list-inside space-y-3 text-gray-600">
+            <ol className="list-decimal list-inside space-y-2 text-gray-600">
               <li>
-                {/* Make a list of accounts and obligations: bank accounts,
-                investment accounts, loan providers (personal and
-                institutional), credit cards, house mortgage. */}
                 Make a list of all your;
-                <ul>
+                <ul className="list-disc list-inside ml-4 mt-2 text-gray-600">
                   <li>bank accounts</li>
                   <li>investment accounts</li>
                   <li>loan providers (Personal + Institutional)</li>
-                  <li> credit cards if you use credit cards</li>
-                  <li>House Mortgage</li>
+                  <li>credit cards (if you use them)</li>
+                  <li>house mortgage</li>
                 </ul>
               </li>
               <li>
                 Itemize the tangible things you own:
-                {/* paid off house, paid offcar, valuables like gold. */}
-                <ul>
-                  <li>paid off house</li>
-                  <li>paid off car</li>
-                  <li>valuables like gold.</li>
+                <ul className="list-disc list-inside ml-4 mt-2 text-gray-600">
+                  <li>paid-off house</li>
+                  <li>paid-off car</li>
+                  <li>valuables (e.g. gold)</li>
                 </ul>
               </li>
-              <li>Assign the current value to each item in your list.</li>
-              <li>
+              <li className="mt-1">
+                Assign the current value to each item in your list.
+              </li>
+              <li className="mt-1">
                 Create a table with two columns: Assets and Debts, then add the
                 values.
               </li>
@@ -195,19 +193,19 @@ const DoYouKnowYourFinancialStatus = () => {
             Assets vs Debts
           </h2>
           <div className="overflow-x-auto rounded-3xl border border-gray-100 shadow-sm">
-            <table className="min-w-full border-separate border-spacing-y-3 text-left">
+            <table className="min-w-full border-separate border-spacing-y-1 text-left">
               <thead>
                 <tr>
-                  <th className="bg-gray-100 px-5 py-4 text-sm font-semibold text-gray-900">
+                  <th className="bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-900">
                     Assets
                   </th>
-                  <th className="bg-gray-100 px-5 py-4 text-sm font-semibold text-gray-900">
+                  <th className="bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-900">
                     Amount
                   </th>
-                  <th className="bg-gray-100 px-5 py-4 text-sm font-semibold text-gray-900">
+                  <th className="bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-900">
                     Debts
                   </th>
-                  <th className="bg-gray-100 px-5 py-4 text-sm font-semibold text-gray-900">
+                  <th className="bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-900">
                     Amount
                   </th>
                 </tr>
@@ -215,40 +213,32 @@ const DoYouKnowYourFinancialStatus = () => {
               <tbody>
                 {assetsDebtsRows.map((row, index) => (
                   <tr key={index} className="bg-white border-b last:border-b-0">
-                    <td className="px-5 py-4 text-gray-700">{row.asset}</td>
-                    <td className="px-5 py-4 text-gray-700">
+                    <td className="px-4 py-2 text-gray-700">{row.asset}</td>
+                    <td className="px-4 py-2 text-gray-700">
                       {row.assetValue}
                     </td>
-                    <td className="px-5 py-4 text-gray-700">{row.debt}</td>
-                    <td className="px-5 py-4 text-gray-700">{row.debtValue}</td>
+                    <td className="px-4 py-2 text-gray-700">{row.debt}</td>
+                    <td className="px-4 py-2 text-gray-700">{row.debtValue}</td>
                   </tr>
                 ))}
                 <tr className="bg-gray-50 border-t text-gray-900 font-semibold">
-                  <td className="px-5 py-4">Total</td>
-                  <td className="px-5 py-4">400,000</td>
-                  <td className="px-5 py-4">Total</td>
-                  <td className="px-5 py-4">65,000</td>
+                  <td className="px-4 py-2">Total</td>
+                  <td className="px-4 py-2">400,000</td>
+                  <td className="px-4 py-2">Total</td>
+                  <td className="px-4 py-2">65,000</td>
                 </tr>
               </tbody>
+              <tfoot>
+                <tr>
+                  <td
+                    colSpan={4}
+                    className="px-4 py-3 bg-teal-50 text-teal-800 font-semibold"
+                  >
+                    Net worth: 400,000 – 65,000 = 335,000
+                  </td>
+                </tr>
+              </tfoot>
             </table>
-          </div>
-          <div
-            className="mt-6 rounded-3xl border border-teal-100 bg-teal-50 p-6"
-            style={{
-              background:
-                "linear-gradient(135deg, #003d46 0%, #006A71 55%, #00878f 100%)",
-            }}
-          >
-            <p className="text-white text-lg font-semibold mb-2">
-              Net worth result
-            </p>
-            <p className="text-white leading-relaxed">
-              Net worth is calculated as Assets minus Debts. For the values
-              above, your net worth would be:
-            </p>
-            <p className="mt-4 inline-flex items-center rounded-full bg-white px-4 py-3 text-teal-800 font-semibold shadow-sm">
-              400,000 – 65,000 = 335,000
-            </p>
           </div>
         </section>
 
@@ -293,15 +283,29 @@ const DoYouKnowYourFinancialStatus = () => {
         <section className="mb-10">
           <p className="text-gray-600 leading-relaxed mb-4">
             For your net worth calculator, you can download and use the word
-            document here or make a copy of our free net worth calculator via
+            document{" "}
+            <a
+              href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-700 underline hover:text-teal-900"
+            >
+              here
+            </a>{" "}
+            or make a copy of our free net worth calculator via the same
+            spreadsheet.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Have any question, comment or feedback?
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="mailto:mindthenaira@gmail.com"
               className="inline-flex items-center justify-center rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800 transition-colors"
             >
-              Contact us for the download
+              Contact us
             </a>
+
             <a
               href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
               target="_blank"

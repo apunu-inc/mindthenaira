@@ -155,7 +155,7 @@ const DoYouKnowYourFinancialStatus = () => {
           </div>
 
           <div className="space-y-4">
-            <p className="text-gray-700 font-semibold">
+            <p className="text-2xl text-gray-900 font-semibold">
               Now, let’s get into the steps:
             </p>
             <ol className="list-decimal list-inside space-y-2 text-gray-600">
@@ -292,8 +292,16 @@ const DoYouKnowYourFinancialStatus = () => {
             >
               here.
             </a>{" "}
-            or make a copy of our free net worth calculator via the same
-            spreadsheet.
+            or make a copy of our free net worth calculator via{" "}
+            <a
+              href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-700 underline hover:text-teal-900"
+            >
+              here
+            </a>
+            .
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             Have any question, comment or feedback?
@@ -304,15 +312,6 @@ const DoYouKnowYourFinancialStatus = () => {
               className="inline-flex items-center justify-center rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800 transition-colors"
             >
               Contact us
-            </a>
-
-            <a
-              href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-teal-700 bg-white px-5 py-3 text-sm font-semibold text-teal-700 hover:bg-teal-50 transition-colors"
-            >
-              Open free net worth calculator
             </a>
           </div>
         </section>

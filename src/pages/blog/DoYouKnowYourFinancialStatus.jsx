@@ -290,9 +290,9 @@ const DoYouKnowYourFinancialStatus = () => {
               rel="noopener noreferrer"
               className="text-teal-700 underline hover:text-teal-900"
             >
-              here.
-            </a>{" "}
-            or make a copy of our free net worth calculator via{" "}
+              here
+            </a>
+            . or make a copy of our free net worth calculator via{" "}
             <a
               href="https://docs.google.com/spreadsheets/d/1PlofW5ZH9RxN5dWeJ32_mHiq4Me1QgdBQAho778FZ9w/edit?gid=0#gid=0"
               target="_blank"

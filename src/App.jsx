@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import HowItWorks from "./pages/HowItWorks";
 import BudgetTemplate from "./pages/BudgetTemplate";
 import Contact from "./pages/Contact";
+import Links from "./pages/Links";
 import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
 import CookiesPolicy from "./pages/CookiesPolicy";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/budget-template" element={<BudgetTemplate />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/links" element={<Links />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/cookies-policy" element={<CookiesPolicy />} />

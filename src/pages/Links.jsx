@@ -42,6 +42,12 @@ export default function Links() {
             >
               Money Mindset
             </Link>
+            <Link
+              to="/blog/do-you-know-your-financial-status"
+              className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
+            >
+              Financial Status{" "}
+            </Link>
           </div>
 
           <p className="text-xs text-teal-300/70 mt-5 text-center">

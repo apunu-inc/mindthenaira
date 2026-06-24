@@ -43,6 +43,18 @@ const articles = [
     readTime: "6 min read",
     featured: false,
   },
+  {
+    slug: "/blog/Budgeting-Is-Freedom",
+    title: "Budgeting is Freedom",
+    excerpt:
+      "Budgeting is the financial tool that gives you clarity and control. Learn why it matters and how to make it work with your income.",
+    image: BlogArticleHero,
+    imageAlt: "Person planning a budget on a laptop with cash nearby",
+    category: "Budgeting",
+    date: "April 2026",
+    readTime: "8 min read",
+    featured: false,
+  },
 ];
 
 const Blog = () => {

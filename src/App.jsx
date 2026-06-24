@@ -17,6 +17,7 @@ import Blog from "./pages/Blog";
 import HowToSaveN50K from "./pages/blog/HowToSaveN50K";
 import UnhingedExpenses from "./pages/blog/UnhingedExpenses";
 import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialStatus";
+import BudgetingIsFreedom from "./pages/blog/BudgetingIsFreedom";
 
 function App() {
   return (
@@ -50,6 +51,10 @@ function App() {
         <Route
           path="/blog/do-you-know-your-financial-status"
           element={<DoYouKnowYourFinancialStatus />}
+        />
+        <Route
+          path="/blog/Budgeting-Is-Freedom"
+          element={<BudgetingIsFreedom />}
         />
       </Routes>
       <CookieBanner />

@@ -545,7 +545,7 @@ const HowToSaveN50K = () => {
             }}
           >
             <p className="text-teal-200 text-sm font-medium uppercase tracking-widest mb-3">
-              Free Resource
+              Free Resource.
             </p>
             <h4 className="text-xl md:text-2xl font-bold mb-3">
               Want to build your budget from scratch?

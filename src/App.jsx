@@ -1,4 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { initGA, trackPageView } from "./analytics";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -19,9 +22,24 @@ import UnhingedExpenses from "./pages/blog/UnhingedExpenses";
 import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialStatus";
 import BudgetingIsFreedom from "./pages/blog/BudgetingIsFreedom";
 
+function PageTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <PageTracking />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

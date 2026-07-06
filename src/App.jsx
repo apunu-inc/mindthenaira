@@ -21,6 +21,7 @@ import HowToSaveN50K from "./pages/blog/HowToSaveN50K";
 import UnhingedExpenses from "./pages/blog/UnhingedExpenses";
 import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialStatus";
 import BudgetingIsFreedom from "./pages/blog/BudgetingIsFreedom";
+import MoneySession from "./pages/MoneySession";
 
 function PageTracking() {
   const location = useLocation();
@@ -56,6 +57,7 @@ function App() {
         <Route path="/cookies-policy" element={<CookiesPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/money-mindset" element={<MoneyMindset />} />
+        <Route path="/register-for-money-session" element={<MoneySession />} />
 
         {/* Blog Articles */}
         <Route
@@ -79,5 +81,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

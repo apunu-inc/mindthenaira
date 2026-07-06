@@ -48,6 +48,12 @@ export default function Links() {
             >
               Financial Status{" "}
             </Link>
+            <Link
+              to="/register-for-money-session"
+              className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
+            >
+              Register for Money Session
+            </Link>
           </div>
 
           <p className="text-xs text-teal-300/70 mt-5 text-center">

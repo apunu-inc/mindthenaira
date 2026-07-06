@@ -119,6 +119,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/register-for-money-session"
+                  className="hover:text-teal-400 transition-colors"
+                >
+                  Register for Money Session
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/services"
                   className="hover:text-teal-400 transition-colors"
                 >

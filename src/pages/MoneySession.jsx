@@ -109,13 +109,13 @@ export default function MoneySession() {
         ) : (
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10">
             <div className="text-center mb-8">
-              <div className="text-4xl mb-4"> 📆 </div>
+              <div className="text-4xl mb-4"> 📆📆 </div>
               <h1 className="text-white text-2xl sm:text-3xl font-bold leading-tight">
                 Register for <br />
                 Money Session on <br />
               </h1>
               <p className="text-teal-200 text-sm mt-2">
-                Friday 31/07/2026 at 6:00pm WAT
+                Friday 31/07/2026 at 6:00pm WAT.
               </p>
             </div>
 

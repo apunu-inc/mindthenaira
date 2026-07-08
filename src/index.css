@@ -77,3 +77,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.calendar-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem; /* Adjust the size as needed */
+  text-align: center;
+}
+
+.calendar-number {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem; /* Size of the number '31' */
+  font-weight: bold;
+  color: #000; /* Change the number color to fit your design */
+}

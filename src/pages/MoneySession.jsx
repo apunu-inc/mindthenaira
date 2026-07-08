@@ -109,7 +109,7 @@ export default function MoneySession() {
         ) : (
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10">
             <div className="text-center mb-8">
-              <div className="text-4xl mb-4">{calenderDate}</div>{" "}
+              <div className="text-4xl mb-4">{calenderDate} 📆 </div>{" "}
               <h1 className="text-white text-2xl sm:text-3xl font-bold leading-tight">
                 Register for <br />
                 Money Session on <br />

@@ -118,8 +118,8 @@ export default function MoneySession() {
                 />
               </div>
               <h1 className="text-white text-2xl sm:text-3xl font-bold leading-tight">
-                Register for <br />
-                Money Session on <br />
+                Register for <br /> "Let's Talk Money"
+                <br />
               </h1>
               <p className="text-teal-200 text-sm mt-2">
                 Friday 31/07/2026 at 6:00pm WAT.

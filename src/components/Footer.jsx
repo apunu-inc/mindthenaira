@@ -119,10 +119,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/register-for-money-session"
+                  to="/register-for-lets-talk-money"
                   className="hover:text-teal-400 transition-colors"
                 >
-                  Register for Money Session
+                  Register for "Let's Talk Money"
                 </Link>
               </li>
               <li>

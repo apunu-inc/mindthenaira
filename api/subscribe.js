@@ -1,3 +1,5 @@
+import { getBrevoErrorMessage } from "./utils/brevo.js";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -34,7 +36,7 @@ export default async function handler(req, res) {
       console.error("Brevo API error:", response.status, data);
       return res
         .status(response.status)
-        .json({ message: data.message || "Failed to save contact" });
+        .json({ message: getBrevoErrorMessage(response.status, data) });
     }
 
     return res.status(200).json({ success: true });

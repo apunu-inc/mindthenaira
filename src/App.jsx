@@ -57,7 +57,10 @@ function App() {
         <Route path="/cookies-policy" element={<CookiesPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/money-mindset" element={<MoneyMindset />} />
-        <Route path="/register-for-money-session" element={<MoneySession />} />
+        <Route
+          path="/register-for-lets-talk-money"
+          element={<MoneySession />}
+        />
 
         {/* Blog Articles */}
         <Route

@@ -1,3 +1,5 @@
+import { getBrevoErrorMessage } from "./utils/brevo.js";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -41,7 +43,7 @@ export default async function handler(req, res) {
       console.error("Brevo contacts error:", contactRes.status, data);
       return res
         .status(contactRes.status)
-        .json({ message: data.message || "Failed to save contact" });
+        .json({ message: getBrevoErrorMessage(contactRes.status, data) });
     }
 
     // 2. Look up the contact by email to get the ID (works for both new and existing contacts)

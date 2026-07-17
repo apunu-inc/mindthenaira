@@ -23,6 +23,12 @@ export default function Links() {
 
           <div className="space-y-3">
             <Link
+              to="/register-for-lets-talk-money"
+              className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
+            >
+              Register for "Let's Talk Money"
+            </Link>
+            <Link
               to="/blog"
               className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
             >
@@ -47,12 +53,6 @@ export default function Links() {
               className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
             >
               Financial Status{" "}
-            </Link>
-            <Link
-              to="/register-for-lets-talk-money"
-              className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
-            >
-              Register for "Let's Talk Money"
             </Link>
           </div>
 

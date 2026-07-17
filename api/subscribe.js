@@ -33,13 +33,15 @@ export default async function handler(req, res) {
 
     if (!response.ok && response.status !== 204) {
       const data = await response.json().catch(() => ({}));
+
       console.error("Brevo API error:", response.status, data);
-      return res
-        .status(response.status)
-        .json({ message: getBrevoErrorMessage(response.status, data) });
+
+      // TEMPORARY - show the real Brevo error
+      console.log(JSON.stringify(data, null, 2));
+      return res.status(response.status).json(data);
     }
 
-    return res.status(200).json({ success: true });
+    // return res.status(200).json({ success: true });
   } catch (err) {
     console.error("subscribe handler error:", err);
     return res.status(500).json({ message: "Server error" });

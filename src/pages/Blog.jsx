@@ -55,6 +55,18 @@ const articles = [
     readTime: "8 min read",
     featured: false,
   },
+  {
+    slug: "/blog/Lets-Talk-Debt",
+    title: "Let’s Talk Debt",
+    excerpt:
+      "High-interest loans can steal your progress. Learn how to avoid bad debt, pay down existing obligations fast, and rebuild financial stability.",
+    image: BlogArticleHero,
+    imageAlt: "Person reading financial guidance on a laptop",
+    category: "Debt",
+    date: "April 2026",
+    readTime: "7 min read",
+    featured: false,
+  },
 ];
 
 const Blog = () => {

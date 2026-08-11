@@ -21,6 +21,7 @@ import HowToSaveN50K from "./pages/blog/HowToSaveN50K";
 import UnhingedExpenses from "./pages/blog/UnhingedExpenses";
 import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialStatus";
 import BudgetingIsFreedom from "./pages/blog/BudgetingIsFreedom";
+import LetsTalkDebt from "./pages/blog/LetsTalkDebt";
 import MoneySession from "./pages/MoneySession";
 
 function PageTracking() {
@@ -79,6 +80,7 @@ function App() {
           path="/blog/Budgeting-Is-Freedom"
           element={<BudgetingIsFreedom />}
         />
+        <Route path="/blog/Lets-Talk-Debt" element={<LetsTalkDebt />} />
       </Routes>
       <CookieBanner />
     </BrowserRouter>

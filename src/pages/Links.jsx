@@ -29,19 +29,23 @@ export default function Links() {
               Register for "Let's Talk Money"
             </Link>
             <Link
+              to="/naijabudgets"
+              className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
+            >
+              Naijabudgets{" "}
+            </Link>
+            <Link
               to="/blog"
               className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
             >
               Blog
             </Link>
-
             <Link
               to="/budget-template"
               className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"
             >
               Budget Template
             </Link>
-
             <Link
               to="/money-mindset"
               className="block w-full p-4 rounded-xl bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-all hover:shadow-lg text-center"

@@ -23,6 +23,7 @@ import DoYouKnowYourFinancialStatus from "./pages/blog/DoYouKnowYourFinancialSta
 import BudgetingIsFreedom from "./pages/blog/BudgetingIsFreedom";
 import LetsTalkDebt from "./pages/blog/LetsTalkDebt";
 import MoneySession from "./pages/MoneySession";
+import Naijabudgets from "./pages/Naijabudgets";
 
 function PageTracking() {
   const location = useLocation();
@@ -48,7 +49,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-
+        <Route path="/naijabudgets" element={<Naijabudgets />} />
         <Route path="/budget-template" element={<BudgetTemplate />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
@@ -62,7 +63,6 @@ function App() {
           path="/register-for-lets-talk-money"
           element={<MoneySession />}
         />
-
         {/* Blog Articles */}
         <Route
           path="/blog/how-to-save-on-n50000-salary-in-nigeria"

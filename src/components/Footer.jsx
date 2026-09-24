@@ -67,8 +67,13 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
+
               <li>
-                <span className="text-gray-600">Careers</span>
+                <Link to="/naijabudgets">
+                  <span className="hover:text-teal-400 transition-colors">
+                    Naijabudgets
+                  </span>
+                </Link>
               </li>
               <li>
                 <Link

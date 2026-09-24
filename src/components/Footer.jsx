@@ -70,7 +70,7 @@ const Footer = () => {
 
               <li>
                 <Link to="/naijabudgets">
-                  <span className="hover:text-teal-400 transition-colors">
+                  <span className=" hover:text-teal-400 transition-colors">
                     Naijabudgets
                   </span>
                 </Link>

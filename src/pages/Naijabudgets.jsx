@@ -5,11 +5,11 @@ import naijaBudgetsImage from "../assets/naijabudgets.jpg";
 const conversation = [
   [
     "When did you start budgeting?",
-    "I won't really say 1 budget. I just know how much I spend on some things. I don't earn a lot and 1 need to make sure it lasts me till the end of the month. When I get my salary, there are 3 things I do immediately.",
+    "I won't really say I budget. I just know how much I spend on some things. I don't earn a lot and I need to make sure it lasts me till the end of the month. When I get my salary, there are 3 things I do immediately.",
   ],
   [
     "What are those things?",
-    "My salary is paid in cash. I give my Mum N50K and put N50K in my Opay account. leave N60K in my bag to cover for my transportation for the month and the rest just goes on food and small small shopping",
+    "My salary is paid in cash. I give my Mum N50K and put N50K in my Opay account.I leave N60K in my bag to cover for my transportation for the month and the rest just goes on food and small small shopping.",
   ],
   ["That's like a budget then", "Ehn ehn...maybe"],
   [
@@ -18,7 +18,11 @@ const conversation = [
   ],
   [
     "You only have 20K left after you transfer to your Opay, give your Mum money and put aside your transportation. How do you survive on that?",
-    "Most times I don't eat breakfast and 1 get lunch at work. I work Monday to Saturday so only eat dinners at home and on Sundays. I don't buy anything unless I really need it.",
+    "Most times I don't eat breakfast and I get lunch at work. I work Monday to Saturday so only eat dinners at home and on Sundays. I don't buy anything unless I really need it.",
+  ],
+  [
+    "Ok, What do you do with the money you transfer to your Opay account?",
+    "I want to start my own business but I'm not sure what to do yet. I don't have time at all. Also, this is the only way I don't end up spending the money.",
   ],
   [
     "Do you have a pension account?",
@@ -34,7 +38,7 @@ const conversation = [
   ],
   [
     "If you don't mind, can you share how much you have in Opay? And is it invested?",
-    "1 started in February so 1 now have N350K. Not invested o. I don't want anything to happen to that money.",
+    "I started in February so I now have N350K. Not invested o. I don't want anything to happen to that money.",
   ],
   ["Ok, do you know when you will start your business?", "Not yet"],
   [
@@ -45,12 +49,11 @@ const conversation = [
     "Yes, you can check their offerings and other providers as well before you decide.",
     "Okay",
   ],
-  ["Can we rework your budget now?", "This my small money"],
-  ["Yes let's do it", null],
+  ["Can we rework your budget now?", "This my small money😚. Yes let's do it."],
 ];
 
 const actions = [
-  "Request a salary increase to N200K If she gets it, she will add 10K to her emergency fund and start investing N10K",
+  "Request a salary increase to N200K. If she gets it, she will add 10K to her emergency fund and start investing N10K.",
   "Buy ilera Eko health insurance for N15K from her September salary. She will reduce her Opay transfer to N35K",
   "Reduce money to her Mum to N40K which frees up N10K for her to start putting towards emergency funds",
   "Take free YouTube courses on becoming a Virtual Assistant",
@@ -73,8 +76,8 @@ const Naijabudgets = () => {
                   NaijaBudgets
                 </h1>
                 <p className="mt-7 max-w-2xl text-base leading-8 text-teal-100 md:text-lg">
-                  Naiabudgets shares everyday Nigerians budgets giving you
-                  aninsight into how they spend their money. Read about Tit's
+                  Naiabudgets shares everyday Nigerians budgets giving you an
+                  insight into how they spend their money. Read about Titi's
                   budget and the changes she plans to make after her budget
                   review.
                 </p>
@@ -119,7 +122,7 @@ const Naijabudgets = () => {
               We did a full budget review with Titi to get her onto the 4
               pillars of financial fitness. We also discussed opportunities for
               her to increase her income. Below is the output of her current
-              budget Vs her new budget
+              budget Vs her new budget:
             </p>
             <h2 className="mt-10 text-2xl font-bold text-[#003d46]">
               The agreed actions are:
@@ -137,7 +140,7 @@ const Naijabudgets = () => {
             className="soft-reveal mt-16 border-t border-gray-200 pt-8 text-base leading-8 text-gray-600"
             style={{ animationDelay: "1050ms" }}
           >
-            TitiO. is a Chemistry graduate of LASU. She completed her NYS in
+            Titi O. is a Chemistry graduate of LASU. She completed her NYSC in
             2025 and started working as a shop assistant in January 2026
           </p>
         </div>

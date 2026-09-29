@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import naijaBudgetsImage from "../assets/naijabudgets.jpg";
-
 const conversation = [
   [
     "When did you start budgeting?",
@@ -65,9 +64,9 @@ const Naijabudgets = () => {
     <>
       <Navbar />
       <main className="bg-[#f8faf9] text-gray-900">
-        <header className="bg-[#003d46] px-6 pb-12 pt-8 text-white md:px-12 md:pb-16 lg:px-24">
-          <div className="mx-auto max-w-6xl">
-            <div className="grid items-center gap-10 md:grid-cols-[1fr_320px] lg:grid-cols-[1fr_390px] lg:gap-20">
+        <header className="bg-[#003d46] px-6 py-8 text-white md:px-12 md:py-10 lg:px-20">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_300px] lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
               <div className="soft-reveal max-w-3xl">
                 <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-teal-300">
                   NaijaBudgets
@@ -75,38 +74,38 @@ const Naijabudgets = () => {
                 <h1 className="text-4xl font-bold leading-tight md:text-6xl">
                   NaijaBudgets
                 </h1>
-                <p className="mt-7 max-w-2xl text-base leading-8 text-teal-100 md:text-lg">
+                <p className="mt-5 max-w-3xl text-base leading-7 text-teal-100 md:text-lg">
                   Naiabudgets shares everyday Nigerians budgets giving you an
                   insight into how they spend their money. Read about Titi's
                   budget and the changes she plans to make after her budget
                   review.
                 </p>
               </div>
-              <div className="gentle-drift relative mx-auto w-full max-w-[390px] md:mx-0">
-                <div className="absolute -inset-2 rounded-[2rem] border border-teal-200/20" />
+              <div className="gentle-drift relative mx-auto w-full max-w-[360px] md:mx-0">
+                <div className="absolute -inset-2 rounded-2xl border border-teal-200/20" />
                 <img
                   src={naijaBudgetsImage}
                   alt="Shop assistant at work with handwritten budget notes"
-                  className="relative aspect-[4/5] w-full rounded-[1.75rem] object-cover object-center shadow-2xl"
+                  className="relative aspect-[5/4] w-full rounded-xl object-cover object-center shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </header>
 
-        <div className="mx-auto max-w-3xl px-6 py-16 md:px-12 md:py-24">
-          <div className="space-y-12">
+        <article className="mx-auto max-w-6xl px-6 py-10 md:px-12 md:py-14 lg:px-16">
+          <div className="max-w-5xl space-y-7">
             {conversation.map(([question, answer], index) => (
               <section
                 key={`${question}-${index}`}
                 className="soft-reveal"
                 style={{ animationDelay: `${120 + index * 55}ms` }}
               >
-                <h2 className="max-w-2xl text-xl font-bold leading-8 text-[#003d46] md:text-2xl">
+                <h2 className="text-lg font-bold leading-6 text-[#003d46] md:text-xl">
                   {question}
                 </h2>
                 {answer && (
-                  <p className="mt-4 text-base leading-8 text-gray-600">
+                  <p className="mt-2 text-base leading-7 text-gray-600">
                     {answer}
                   </p>
                 )}
@@ -115,19 +114,19 @@ const Naijabudgets = () => {
           </div>
 
           <section
-            className="soft-reveal mt-20 border-t-2 border-[#006a71] pt-10"
+            className="soft-reveal mt-10 border-t-2 border-[#006a71] pt-7"
             style={{ animationDelay: "900ms" }}
           >
-            <p className="max-w-2xl text-base leading-8 text-gray-600">
+            <p className="max-w-5xl text-base leading-7 text-gray-600">
               We did a full budget review with Titi to get her onto the 4
               pillars of financial fitness. We also discussed opportunities for
               her to increase her income. Below is the output of her current
               budget Vs her new budget:
             </p>
-            <h2 className="mt-10 text-2xl font-bold text-[#003d46]">
+            <h2 className="mt-7 text-2xl font-bold text-[#003d46]">
               The agreed actions are:
             </h2>
-            <ol className="mt-6 list-decimal space-y-5 pl-6 text-base leading-8 text-gray-600 marker:font-bold marker:text-[#006a71]">
+            <ol className="mt-4 max-w-5xl list-decimal space-y-2 pl-6 text-base leading-7 text-gray-600 marker:font-bold marker:text-[#006a71]">
               {actions.map((action) => (
                 <li key={action} className="pl-2">
                   {action}
@@ -137,13 +136,13 @@ const Naijabudgets = () => {
           </section>
 
           <p
-            className="soft-reveal mt-16 border-t border-gray-200 pt-8 text-base leading-8 text-gray-600"
+            className="soft-reveal mt-10 border-t border-gray-200 pt-5 text-base leading-7 text-gray-600"
             style={{ animationDelay: "1050ms" }}
           >
             Titi O. is a Chemistry graduate of LASU. She completed her NYSC in
             2025 and started working as a shop assistant in January 2026
           </p>
-        </div>
+        </article>
       </main>
       <Footer />
     </>
